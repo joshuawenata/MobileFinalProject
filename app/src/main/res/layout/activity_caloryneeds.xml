@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".caloryneeds">
+
+    <TextView
+        android:id="@+id/calory_maintext"
+        android:layout_width="303dp"
+        android:layout_height="43dp"
+        android:background="@drawable/curved_textview"
+        android:backgroundTint="#48B5A8"
+        android:gravity="center"
+        android:text="Daily Calory Need"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <RelativeLayout
+        android:id="@+id/calorymain_layout"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="144dp"
+        android:background="@drawable/curved_relativelayout"
+        android:backgroundTint="#C9F3F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/calage_layout"
+            android:layout_width="88dp"
+            android:layout_height="108dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="162dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/extra_curved30"
+            android:backgroundTint="#A2F1E8">
+
+            <TextView
+                android:id="@+id/calage_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:text="20" />
+
+            <SeekBar
+                android:id="@+id/calage_seekbar"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="13dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="422dp" />
+
+            <TextView
+                android:id="@+id/calage_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="66dp"
+                android:gravity="center"
+                android:text="Age"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/calweight_layout"
+            android:layout_width="88dp"
+            android:layout_height="108dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginBottom="27dp"
+            android:background="@drawable/extra_curved30"
+            android:backgroundTint="#A2F1E8">
+
+            <TextView
+                android:id="@+id/calweight_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:text="120" />
+
+            <SeekBar
+                android:id="@+id/calweight_seekbar"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="13dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="422dp" />
+
+            <TextView
+                android:id="@+id/calweight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="66dp"
+                android:gravity="center"
+                android:text="Weight"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/maleview_layoutcal"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/maleview_cal"
+                android:layout_width="65dp"
+                android:layout_height="68dp"
+                android:layout_above="@+id/textView_malecal"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="11dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView_malecal"
+                android:layout_width="57dp"
+                android:layout_height="33dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="Male"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/femaleview_layoutcal"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="45dp"
+            android:background="#8C8181">
+
+            <ImageView
+                android:id="@+id/femaleview_cal"
+                android:layout_width="65dp"
+                android:layout_height="68dp"
+                android:layout_above="@+id/textView_femalecal"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="11dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView_femalecal"
+                android:layout_width="57dp"
+                android:layout_height="33dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="Female"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/calheight_layout"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/calweight_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="47dp"
+            android:background="@drawable/extra_curved30"
+            android:backgroundTint="#5BD6C8">
+
+            <TextView
+                android:id="@+id/calheight_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="91dp"
+                android:layout_marginEnd="93dp"
+                android:layout_marginBottom="39dp"
+                android:gravity="center"
+                android:text="90" />
+
+            <SeekBar
+                android:id="@+id/calheight_seekbar"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="18dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="422dp" />
+
+            <TextView
+                android:id="@+id/calheight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="78dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="63dp"
+                android:gravity="center"
+                android:text="Height"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/calory_secondarylayout"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/curved_relativelayout"
+        android:backgroundTint="#16BFBF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorymain_layout"
+        app:layout_constraintVertical_bias="0.906">
+
+        <TextView
+            android:id="@+id/cal_title"
+            android:layout_width="192dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/curved_textview"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="Calories Needed"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cal_view"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="25,94"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
