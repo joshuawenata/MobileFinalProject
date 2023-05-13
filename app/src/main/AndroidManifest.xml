@@ -12,6 +12,18 @@
         android:theme="@style/Theme.Moblefinpro"
         tools:targetApi="31">
         <activity
+            android:name=".WaterReminder"
+            android:exported="false" />
+        <activity
+            android:name=".ExcersizeReminder"
+            android:exported="false" />
+        <activity
+            android:name=".AddExcersize"
+            android:exported="false" />
+        <activity
+            android:name=".SleepReminder"
+            android:exported="false" />
+        <activity
             android:name=".bmicalculator"
             android:exported="false" />
         <activity
