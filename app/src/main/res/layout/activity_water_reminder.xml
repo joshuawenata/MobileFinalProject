@@ -4,6 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5BD6C8"
+    android:orientation="vertical"
     tools:context=".WaterReminder">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="511dp"
+        android:layout_marginTop="224dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="34dp">
+
+<!--        //blm beres https://www.youtube.com/watch?v=7d-IWhjxXIA&ab_channel=EDMTDev-->
+<!--        <me.itangqi.waveloadingview.WaveLoadingView-->
+<!--            android:id="@+id/waveLoadingView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:wlv_borderColor="@color/colorAccent"-->
+<!--            app:wlv_borderWidth="3dp"-->
+<!--            app:wlv_progressValue="40"-->
+<!--            app:wlv_shapeType="circle"-->
+<!--            app:wlv_round_rectangle="true"-->
+<!--            app:wlv_triangle_direction="north"-->
+<!--            app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"-->
+<!--            app:wlv_titleCenterStrokeWidth="3dp"-->
+<!--            app:wlv_titleCenter="Center Title"-->
+<!--            app:wlv_titleCenterColor="@android:color/white"-->
+<!--            app:wlv_titleCenterSize="24sp"-->
+<!--            app:wlv_waveAmplitude="70"-->
+<!--            app:wlv_waveColor="@color/colorAccent"/>-->
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="132dp"
+            android:text="Button" />
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
