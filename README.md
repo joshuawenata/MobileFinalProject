@@ -1,3 +1,5 @@
+[![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://forthebadge.com) <br>
+[![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com) <br>
 # Your Daily Application
 
 Your Daily Application is an Android Studio powered app project that aims to help users improve their daily productivity by providing features that help them relax and manage their body well.
