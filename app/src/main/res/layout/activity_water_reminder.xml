@@ -8,41 +8,145 @@
     android:orientation="vertical"
     tools:context=".WaterReminder">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="511dp"
-        android:layout_marginTop="224dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="34dp">
-
-<!--        //blm beres https://www.youtube.com/watch?v=7d-IWhjxXIA&ab_channel=EDMTDev-->
-<!--        <me.itangqi.waveloadingview.WaveLoadingView-->
-<!--            android:id="@+id/waveLoadingView"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:wlv_borderColor="@color/colorAccent"-->
-<!--            app:wlv_borderWidth="3dp"-->
-<!--            app:wlv_progressValue="40"-->
-<!--            app:wlv_shapeType="circle"-->
-<!--            app:wlv_round_rectangle="true"-->
-<!--            app:wlv_triangle_direction="north"-->
-<!--            app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"-->
-<!--            app:wlv_titleCenterStrokeWidth="3dp"-->
-<!--            app:wlv_titleCenter="Center Title"-->
-<!--            app:wlv_titleCenterColor="@android:color/white"-->
-<!--            app:wlv_titleCenterSize="24sp"-->
-<!--            app:wlv_waveAmplitude="70"-->
-<!--            app:wlv_waveColor="@color/colorAccent"/>-->
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="409dp"
+        android:layout_height="529dp"
+        android:layout_marginTop="204dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="132dp"
+            android:id="@+id/button4"
+            android:layout_width="126dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="137dp"
+            android:layout_marginEnd="146dp"
+            android:layout_marginBottom="29dp"
             android:text="Button" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="107dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="122dp"
+            app:srcCompat="@drawable/glass1" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="76dp"
+            android:gravity="center"
+            android:text="Your Daily 3L Water"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="219dp"
+            android:layout_marginEnd="34dp"
+            android:gravity="center"
+            android:text="2L"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="268dp"
+            android:layout_marginEnd="35dp"
+            android:gravity="center"
+            android:text="1L"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="316dp"
+            android:layout_marginBottom="312dp"
+            android:background="@android:color/black" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="317dp"
+            android:layout_marginBottom="265dp"
+            android:background="@android:color/black" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="317dp"
+            android:layout_marginBottom="218dp"
+            android:background="@android:color/black" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="169dp"
+            android:layout_marginEnd="92dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="171dp"
+            android:layout_marginEnd="35dp"
+            android:gravity="center"
+            android:text="3L"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Reminder"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
