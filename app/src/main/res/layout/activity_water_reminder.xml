@@ -18,43 +18,32 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/changeWater_button"
             android:layout_width="126dp"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="137dp"
-            android:layout_marginEnd="146dp"
-            android:layout_marginBottom="29dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="58dp"
+            android:background="#5BD5C7"
             android:text="Button" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/changeWater_image"
             android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_height="400dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="107dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="60dp"
             android:layout_marginBottom="122dp"
-            app:srcCompat="@drawable/glass1" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="59dp"
-            android:layout_marginEnd="76dp"
-            android:gravity="center"
-            android:text="Your Daily 3L Water"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            app:srcCompat="@drawable/glass1" />
 
         <TextView
             android:id="@+id/textView10"
@@ -62,10 +51,62 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="219dp"
-            android:layout_marginEnd="34dp"
+            android:layout_marginTop="171dp"
+            android:layout_marginEnd="37dp"
+            android:width="300dp"
             android:gravity="center"
             android:text="2L"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="121dp"
+            android:layout_marginEnd="95dp"
+            android:background="@android:color/black" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="314dp"
+            android:layout_marginBottom="266dp"
+            android:background="@android:color/black" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="314dp"
+            android:layout_marginBottom="313dp"
+            android:background="@android:color/black" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="313dp"
+            android:layout_marginBottom="360dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="123dp"
+            android:layout_marginEnd="38dp"
+            android:gravity="center"
+            android:text="3L"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -75,61 +116,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="268dp"
-            android:layout_marginEnd="35dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="38dp"
             android:gravity="center"
             android:text="1L"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <View
-            android:id="@+id/view2"
-            android:layout_width="20dp"
-            android:layout_height="3dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="316dp"
-            android:layout_marginBottom="312dp"
-            android:background="@android:color/black" />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="20dp"
-            android:layout_height="3dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="317dp"
-            android:layout_marginBottom="265dp"
-            android:background="@android:color/black" />
-
-        <View
-            android:layout_width="20dp"
-            android:layout_height="3dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="317dp"
-            android:layout_marginBottom="218dp"
-            android:background="@android:color/black" />
-
-        <View
-            android:layout_width="4dp"
-            android:layout_height="180dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="169dp"
-            android:layout_marginEnd="92dp"
-            android:background="@android:color/black" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="54dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="171dp"
-            android:layout_marginEnd="35dp"
-            android:gravity="center"
-            android:text="3L"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -140,13 +130,33 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Water Reminder"
-        android:textSize="50sp"
+        android:text="Let's Hydrate"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_textview"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="WATER REMINDER"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

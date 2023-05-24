@@ -1,35 +1,39 @@
 package com.example.moblefinpro;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class WaterReminder extends AppCompatActivity {
 
     AnimationDrawable waveAnimated;
+    private ImageView imageView;
+    private Button button;
+    private int buttonClickCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_reminder);
-//        WaveLoadingView mWaveLoadingView = (WaveLoadingView) findViewById(R.id.waveLoadingView);
-//        mWaveLoadingView.setShapeType(WaveLoadingView.ShapeType.CIRCLE);
-//        mWaveLoadingView.setTopTitle("Top Title");
-//        mWaveLoadingView.setCenterTitleColor(Color.GRAY);
-//        mWaveLoadingView.setBottomTitleSize(18);
-//        mWaveLoadingView.setProgressValue(80);
-//        mWaveLoadingView.setBorderWidth(10);
-//        mWaveLoadingView.setAmplitudeRatio(60);
-//        mWaveLoadingView.setWaveColor(Color.GRAY);
-//        mWaveLoadingView.setBorderColor(Color.GRAY);
-//        mWaveLoadingView.setTopTitleStrokeColor(Color.BLUE);
-//        mWaveLoadingView.setTopTitleStrokeWidth(3);
-//        mWaveLoadingView.setAnimDuration(3000);
-//        mWaveLoadingView.pauseAnimation();
-//        mWaveLoadingView.resumeAnimation();
-//        mWaveLoadingView.cancelAnimation();
-//        mWaveLoadingView.startAnimation();
+        imageView = findViewById(R.id.changeWater_image);
+        button = findViewById(R.id.changeWater_button);
+        imageView.setImageResource(R.drawable.glass1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonClickCount++;
+
+                if (buttonClickCount % 4 == 1) {
+                    imageView.setImageResource(R.drawable.glass2);
+                } else if (buttonClickCount % 4 == 2) {
+                    imageView.setImageResource(R.drawable.glass3);
+                } else {
+                    imageView.setImageResource(R.drawable.glass4);
+                }
+            }
+        });
     }
 }
