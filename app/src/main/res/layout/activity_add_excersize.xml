@@ -7,12 +7,84 @@
     tools:context=".AddExcersize">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout4"
         android:layout_width="400dp"
         android:layout_height="500dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="112dp"
+        android:background="@drawable/curved_relativelayout"
+        android:backgroundTint="#CADAD6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/set_textexadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="439dp"
+            android:minHeight="48dp"
+            android:text="Set Excersize Name" />
+
+        <TextView
+            android:id="@+id/ask_text_exadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="213dp"
+            android:text="how many times?" />
+
+        <TimePicker
+            android:id="@+id/exadd_simpleTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="101dp"
+            android:layout_marginBottom="259dp"
+            android:paddingTop="1dp"
+            android:timePickerMode="spinner" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="138dp"
+            android:layout_marginBottom="23dp"
+            android:text="Button" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="123dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="ex: 30 Reps" />
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/add_extitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set New Excersize!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
