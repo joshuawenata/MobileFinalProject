@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".AddExcersize">
 
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
