@@ -12,15 +12,13 @@
         android:id="@+id/menu_layout"
         android:layout_width="415dp"
         android:layout_height="604dp"
-        android:layout_constraintBottom_toBottomOf="parent"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="148dp"
         android:background="@drawable/extra_curved30"
         android:backgroundTint="#C9F3F4"
         android:gravity="center"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="137dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/menu_maintext"
@@ -107,12 +105,13 @@
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="133dp"
+                            android:layout_marginEnd="101dp"
                             android:layout_marginBottom="9dp"
                             android:layout_toStartOf="@+id/text2tablemain"
                             android:gravity="center"
                             android:text="BMI Calculator"
-                            android:textSize="10sp" />
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/text2tablemain"
@@ -121,11 +120,12 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="22dp"
+                            android:layout_marginEnd="13dp"
                             android:layout_marginBottom="9dp"
                             android:gravity="center"
                             android:text="Daily Calorie Needs"
-                            android:textSize="10sp" />
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/image2tablemain"
@@ -182,12 +182,13 @@
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="133dp"
-                            android:layout_marginBottom="9dp"
+                            android:layout_marginEnd="110dp"
+                            android:layout_marginBottom="7dp"
                             android:layout_toStartOf="@+id/text4tablemain"
                             android:gravity="center"
-                            android:text="BMI Calculator"
-                            android:textSize="10sp" />
+                            android:text="Eat Reminder"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/text4tablemain"
@@ -196,11 +197,12 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="22dp"
-                            android:layout_marginBottom="9dp"
+                            android:layout_marginEnd="13dp"
+                            android:layout_marginBottom="7dp"
                             android:gravity="center"
-                            android:text="Daily Calorie Needs"
-                            android:textSize="10sp" />
+                            android:text="Water Reminder"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/image4tablemain"
@@ -246,8 +248,9 @@
                             android:layout_marginBottom="9dp"
                             android:layout_toStartOf="@+id/text6tablemain"
                             android:gravity="center"
-                            android:text="BMI Calculator"
-                            android:textSize="10sp" />
+                            android:text="Sleep Reminder"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/text6tablemain"
@@ -259,8 +262,9 @@
                             android:layout_marginEnd="22dp"
                             android:layout_marginBottom="9dp"
                             android:gravity="center"
-                            android:text="Daily Calorie Needs"
-                            android:textSize="10sp" />
+                            android:text="Excersize Reminder"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
 
                         <ImageView
                             android:id="@+id/image6tablemain"
