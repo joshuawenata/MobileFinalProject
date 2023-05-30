@@ -45,6 +45,7 @@ or
 1. Go To Issues Tab
 
 ![image](https://github.com/joshuawenata/MobileFinalProject/assets/100125029/c349492b-cc66-4522-8121-51dfcb466349)
+
 2. Pick Issues that you want to work on it
 
 3. Assign yourself
