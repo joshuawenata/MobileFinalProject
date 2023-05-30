@@ -43,10 +43,8 @@ or
 ## How To Collaborate
 
 1. Go To Issues Tab
-<br>
 ![image](https://github.com/joshuawenata/MobileFinalProject/assets/100125029/c349492b-cc66-4522-8121-51dfcb466349)
 2. Pick Issues that you want to work on it
 3. Assign yourself
-<br>
 ![image](https://github.com/joshuawenata/MobileFinalProject/assets/100125029/b0fb4b28-bcfc-4c5c-96b2-0973d0a63b49)
 4. Create the branch
