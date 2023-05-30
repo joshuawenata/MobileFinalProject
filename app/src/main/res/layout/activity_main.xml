@@ -7,7 +7,7 @@
     android:background="#12A893"
     tools:context=".MainActivity">
 
-
+<!-- harus di resize kyknya, -->
     <RelativeLayout
         android:id="@+id/menu_layout"
         android:layout_width="415dp"
@@ -32,7 +32,7 @@
             android:layout_marginTop="31dp"
             android:layout_marginEnd="23dp"
             android:layout_marginBottom="545dp"
-            android:text="Focus on Your Health!"
+            android:text="@string/focus_on_your_health"
             android:textSize="25dp" />
 
         <View
@@ -97,7 +97,8 @@
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
                             android:layout_toStartOf="@+id/image2tablemain"
-                            android:src="@drawable/image1" />
+                            android:src="@drawable/image1"
+                            android:onClick="gotoBmi"/>
 
                         <TextView
                             android:id="@+id/text1tablemain"
@@ -109,7 +110,7 @@
                             android:layout_marginBottom="9dp"
                             android:layout_toStartOf="@+id/text2tablemain"
                             android:gravity="center"
-                            android:text="BMI Calculator"
+                            android:text="@string/bmi_calculator"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -134,7 +135,8 @@
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="12dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/image1" />
+                            android:src="@drawable/image1"
+                            android:onClick="gotoDailyCalory"/>
 
                     </RelativeLayout>
 
@@ -174,7 +176,8 @@
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
                             android:layout_toStartOf="@+id/image4tablemain"
-                            android:src="@drawable/image1" />
+                            android:src="@drawable/image1"
+                            android:onClick="gotoEat"/>
 
                         <TextView
                             android:id="@+id/text3tablemain"
@@ -211,7 +214,8 @@
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="12dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/image1" />
+                            android:src="@drawable/image1"
+                            android:onClick="gotoWater"/>
 
                     </RelativeLayout>
 
@@ -236,7 +240,8 @@
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
                             android:layout_toStartOf="@+id/image6tablemain"
-                            android:src="@drawable/image1" />
+                            android:src="@drawable/image1"
+                            android:onClick="gotoSleep"/>
 
                         <TextView
                             android:id="@+id/text5tablemain"
@@ -273,7 +278,8 @@
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="12dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/image1" />
+                            android:src="@drawable/image1"
+                            android:onClick="gotoExercise"/>
 
                     </RelativeLayout>
                 </TableRow>
