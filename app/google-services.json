@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1389196507",
+    "firebase_url": "https://hiro-8b590-default-rtdb.firebaseio.com",
+    "project_id": "hiro-8b590",
+    "storage_bucket": "hiro-8b590.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1389196507:android:23a2e325bcd09f8fbd88fe",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIxwTYRz_8bcGwZy09ViA84L83pVaXSWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1389196507:android:39518134a6dc5bd1bd88fe",
+        "android_client_info": {
+          "package_name": "com.example.moblefinpro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIxwTYRz_8bcGwZy09ViA84L83pVaXSWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
