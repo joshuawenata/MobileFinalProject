@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     public void gotoBmi(View view) {
         startActivity(new Intent(this, bmicalculator.class));
     }
