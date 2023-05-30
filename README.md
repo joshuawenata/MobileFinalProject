@@ -39,3 +39,8 @@ or
 - Ethan Mathias - Frontend, 
 - Jonathan Jason - Frontend, 
 - Jesslyn Audrey - UI/UX, 
+
+## How To Collaborate
+
+1. Go To Issues Tab
+![image](https://github.com/joshuawenata/MobileFinalProject/assets/100125029/c349492b-cc66-4522-8121-51dfcb466349)
