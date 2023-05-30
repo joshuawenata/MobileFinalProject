@@ -11,8 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+public class MainActivity extends AppCompatActivity {
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, SleepReminder.class));
     }
 
-    public void gotoExcercise(View view) {
+    public void gotoExercise(View view) {
         startActivity(new Intent(this, ExcersizeReminder.class));
     }
 }
