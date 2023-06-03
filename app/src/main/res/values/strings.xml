@@ -2,4 +2,7 @@
     <string name="app_name">moblefinpro</string>
     <string name="bmi_calculator">BMI Calculator</string>
     <string name="focus_on_your_health">Focus on Your Health!</string>
+    <string name="hiro_sleep_reminder">HIRO - Sleep Reminder</string>
+    <string name="hiro">HIRO</string>
+    <string name="hiro_wake_up_reminder">HIRO - Wake Up Reminder</string>
 </resources>
