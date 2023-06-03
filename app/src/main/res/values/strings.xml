@@ -11,4 +11,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hiro_sleep_reminder">HIRO - Sleep Reminder</string>
+    <string name="hiro">HIRO</string>
+    <string name="hiro_wake_up_reminder">HIRO - Wake Up Reminder</string>
 </resources>
