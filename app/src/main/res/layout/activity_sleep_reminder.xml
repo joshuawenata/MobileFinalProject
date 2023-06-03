@@ -52,7 +52,7 @@
                 android:textSize="19dp" />
 
             <TimePicker
-                android:id="@+id/sleep_simpleTimePicker"
+                android:id="@+id/bedtime"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_alignParentStart="false"
@@ -108,7 +108,7 @@
                 android:textSize="19sp" />
 
             <TimePicker
-                android:id="@+id/sleep_simpleTimePicker2"
+                android:id="@+id/wakeup"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_alignParentStart="false"
