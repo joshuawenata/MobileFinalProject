@@ -6,8 +6,12 @@ import android.os.Bundle;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class loginpage extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,5 +19,7 @@ public class loginpage extends AppCompatActivity {
         setContentView(R.layout.activity_loginpage);
 
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+
     }
 }
