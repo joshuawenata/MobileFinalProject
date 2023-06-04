@@ -42,6 +42,8 @@ dependencies {
     implementation "androidx.core:core:$core_version"
     implementation 'com.google.firebase:firebase-database:20.2.2'
     implementation 'com.google.firebase:firebase-auth:22.0.0'
+    implementation platform('com.google.firebase:firebase-bom:32.1.0')
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
     testImplementation 'junit:junit:4.13.2'

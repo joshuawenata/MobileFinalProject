@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#12A893"
-    tools:context=".MainActivity">
+    tools:context=".registerpage">
 
     <TextView
         android:id="@+id/signuptitle"
@@ -110,7 +110,9 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="20dp"
-            android:src="@drawable/google" />
+            android:src="@drawable/google"
+            android:onClick="signUpGoogle"
+            />
 
         <ImageView
             android:layout_width="48dp"
