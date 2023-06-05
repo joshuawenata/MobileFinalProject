@@ -19,7 +19,6 @@ public class loginpage extends AppCompatActivity {
         setContentView(R.layout.activity_loginpage);
 
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
-        FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
     }
 }
