@@ -35,7 +35,7 @@ public class registerpage extends AppCompatActivity {
     private final static int RC_SIGN_IN = 123;
     private FirebaseAuth mAuth;
 
-    private EditText username, email, password;
+    private EditText username, email, password, confirmpassword;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Override
@@ -65,6 +65,7 @@ public class registerpage extends AppCompatActivity {
         username = findViewById(R.id.username);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
+        confirmpassword = findViewById(R.id.repassword);
     }
 
     private void createRequest() {
@@ -102,9 +103,7 @@ public class registerpage extends AppCompatActivity {
         }
     }
 
-
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
@@ -133,30 +132,52 @@ public class registerpage extends AppCompatActivity {
     }
 
     public void signUpEmail(View view) {
+        boolean flag = true;
+        String usernameVal = username.getText().toString();
         String emailVal = email.getText().toString();
         String passwordVal = password.getText().toString();
-        String usernameVal = username.getText().toString();
-        mAuth.createUserWithEmailAndPassword(emailVal, passwordVal)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        // User registration successful
-                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                        // You can perform further actions, such as updating user profile or navigating to the next screen
-                        if(firebaseUser != null){
-                            String userId = firebaseUser.getUid();
-                            DatabaseReference myRef = database.getReference().child("Users").push();
-                            myRef.child("userId").setValue(userId);
-                            myRef.child("username").setValue(usernameVal);
-                            myRef.child("email").setValue(firebaseUser.getEmail());
+        String confirmPasswordVal = confirmpassword.getText().toString();
+
+        if(usernameVal.isEmpty()){
+            Toast.makeText(registerpage.this, "username need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(emailVal.isEmpty()){
+            Toast.makeText(registerpage.this, "email need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(passwordVal.isEmpty()){
+            Toast.makeText(registerpage.this, "password need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(confirmPasswordVal.isEmpty()){
+            Toast.makeText(registerpage.this, "confirm password need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(!confirmPasswordVal.equals(passwordVal)){
+            Toast.makeText(registerpage.this, "password and confirm password need to be match!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }
+
+        if(flag){
+            mAuth.createUserWithEmailAndPassword(emailVal, passwordVal)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // User registration successful
+                            FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                            // You can perform further actions, such as updating user profile or navigating to the next screen
+                            if(firebaseUser != null){
+                                String userId = firebaseUser.getUid();
+                                DatabaseReference myRef = database.getReference().child("Users").push();
+                                myRef.child("userId").setValue(userId);
+                                myRef.child("username").setValue(usernameVal);
+                                myRef.child("email").setValue(firebaseUser.getEmail());
+                            }
+                            startActivity(new Intent(registerpage.this, loginpage.class));
+                            finish();
+                        } else {
+                            // User registration failed
+                            String errorMessage = task.getException().getMessage();
+                            // Handle the error appropriately
+                            Toast.makeText(registerpage.this, errorMessage, Toast.LENGTH_SHORT).show();
                         }
-                        startActivity(new Intent(registerpage.this, loginpage.class));
-                        finish();
-                    } else {
-                        // User registration failed
-                        String errorMessage = task.getException().getMessage();
-                        // Handle the error appropriately
-                        Toast.makeText(registerpage.this, errorMessage, Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    });
+        }
     }
 }
