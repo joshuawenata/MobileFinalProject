@@ -51,4 +51,5 @@ public class MainActivity extends AppCompatActivity {
     public void gotoExercise(View view) {
         startActivity(new Intent(this, ExcersizeReminder.class));
     }
+
 }

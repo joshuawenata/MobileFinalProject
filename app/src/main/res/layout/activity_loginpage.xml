@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#6BAEB6"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".loginpage">
 
     <TextView
         android:id="@+id/loginpage_title"
@@ -65,7 +65,8 @@
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="Login"
         android:textColor="@color/black"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:onClick="signInEmail"/>
 
     <TextView
         android:id="@+id/loginpage_information"
