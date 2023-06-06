@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,28 +29,41 @@ public class loginpage extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         initialize();
-        String emailVal = email.getText().toString();
-        String passwordVal = password.getText().toString();
-
-        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
-        mAuth.signInWithEmailAndPassword(emailVal, passwordVal)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Login successful
-                            startActivity(new Intent(loginpage.this, MainActivity.class));
-                            finish();
-                        } else {
-                            // Login failed
-                            Toast.makeText(loginpage.this, "Login failed.", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
     }
 
     private void initialize() {
         email = findViewById(R.id.loginpage_email);
         password = findViewById(R.id.loginpage_password);
+    }
+
+    public void signInEmail(View view) {
+        boolean flag = true;
+        String emailVal = email.getText().toString();
+        String passwordVal = password.getText().toString();
+
+        if(emailVal.isEmpty()){
+            Toast.makeText(loginpage.this, "email need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(passwordVal.isEmpty()){
+            Toast.makeText(loginpage.this, "password need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else{
+            GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+            mAuth.signInWithEmailAndPassword(emailVal, passwordVal)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Login successful
+                                startActivity(new Intent(loginpage.this, MainActivity.class));
+                                finish();
+                            } else {
+                                // Login failed
+                                Toast.makeText(loginpage.this, "Login failed.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
+
     }
 }
