@@ -10,7 +10,7 @@
 <!-- harus di resize kyknya, -->
 
     <RelativeLayout
-        android:id="@+id/menu_layout"
+        android:id="@+id/main_menu_layout"
         android:layout_width="415dp"
         android:layout_height="604dp"
         android:layout_marginTop="120dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/menu_maintext"
+            android:id="@+id/main_menu_text"
             android:layout_width="363dp"
             android:layout_height="28dp"
             android:layout_alignParentStart="true"
@@ -37,10 +37,10 @@
             android:textSize="25dp" />
 
         <View
-            android:id="@+id/horizontal_linemain"
+            android:id="@+id/main_horizontal_line"
             android:layout_width="363dp"
             android:layout_height="1dp"
-            android:layout_alignBottom="@+id/menu_maintext"
+            android:layout_alignBottom="@+id/main_menu_text"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="29dp"
@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.152"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/menu_maintext"
+            app:layout_constraintTop_toBottomOf="@id/main_menu_text"
             app:layout_constraintVertical_bias="0.532" />
 
         <ScrollView
@@ -89,32 +89,32 @@
 
 
                         <ImageView
-                            android:id="@+id/image1tablemain"
+                            android:id="@+id/main_image1table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
-                            android:layout_toStartOf="@+id/image2tablemain"
+                            android:layout_toStartOf="@+id/main_image2table"
                             android:onClick="gotoBmi"
                             android:src="@drawable/bmilogo" />
 
                         <TextView
-                            android:id="@+id/text1tablemain"
+                            android:id="@+id/main_text1table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="92dp"
                             android:layout_marginBottom="8dp"
-                            android:layout_toStartOf="@+id/text2tablemain"
+                            android:layout_toStartOf="@+id/main_text2table"
                             android:gravity="center"
                             android:text="@string/bmi_calculator"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/text2tablemain"
+                            android:id="@+id/main_text2table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentEnd="true"
@@ -128,7 +128,7 @@
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/image2tablemain"
+                            android:id="@+id/main_image2table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentTop="true"
@@ -170,32 +170,32 @@
 
 
                         <ImageView
-                            android:id="@+id/image3tablemain"
+                            android:id="@+id/main_image3table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
-                            android:layout_toStartOf="@+id/image4tablemain"
+                            android:layout_toStartOf="@+id/main_image4table"
                             android:onClick="gotoEat"
                             android:src="@drawable/eatlogo" />
 
                         <TextView
-                            android:id="@+id/text3tablemain"
+                            android:id="@+id/main_text3table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="110dp"
                             android:layout_marginBottom="7dp"
-                            android:layout_toStartOf="@+id/text4tablemain"
+                            android:layout_toStartOf="@+id/main_text4table"
                             android:gravity="center"
                             android:text="Eat Reminder"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/text4tablemain"
+                            android:id="@+id/main_text4table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentEnd="true"
@@ -209,7 +209,7 @@
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/image4tablemain"
+                            android:id="@+id/main_image4table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentEnd="true"
@@ -234,32 +234,32 @@
 
 
                         <ImageView
-                            android:id="@+id/image5tablemain"
+                            android:id="@+id/main_image5table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
-                            android:layout_toStartOf="@+id/image6tablemain"
+                            android:layout_toStartOf="@+id/main_image6table"
                             android:onClick="gotoSleep"
                             android:src="@drawable/iconsleep" />
 
                         <TextView
-                            android:id="@+id/text5tablemain"
+                            android:id="@+id/main_text5table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="87dp"
                             android:layout_marginBottom="8dp"
-                            android:layout_toStartOf="@+id/text6tablemain"
+                            android:layout_toStartOf="@+id/main_text6table"
                             android:gravity="center"
                             android:text="Sleep Reminder"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/text6tablemain"
+                            android:id="@+id/main_text6table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentEnd="true"
@@ -273,7 +273,7 @@
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/image6tablemain"
+                            android:id="@+id/main_image6table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentEnd="true"
@@ -298,7 +298,7 @@
         android:textColor="@color/white"
         android:textSize="36dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/menu_layout"
+        app:layout_constraintBottom_toTopOf="@+id/main_menu_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"

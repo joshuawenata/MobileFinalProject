@@ -62,10 +62,10 @@ public class registerpage extends AppCompatActivity {
     }
 
     private void initialize() {
-        username = findViewById(R.id.username);
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
-        confirmpassword = findViewById(R.id.repassword);
+        username = findViewById(R.id.registerpage_username);
+        email = findViewById(R.id.registerpage_email);
+        password = findViewById(R.id.registerpage_password);
+        confirmpassword = findViewById(R.id.registerpage_repassword);
     }
 
     private void createRequest() {

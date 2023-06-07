@@ -18,8 +18,8 @@ public class WaterReminder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_reminder);
-        imageView = findViewById(R.id.changeWater_image);
-        button = findViewById(R.id.changeWater_button);
+        imageView = findViewById(R.id.water_reminder_changeWaterImage);
+        button = findViewById(R.id.water_reminder_changeWaterButton);
         imageView.setImageResource(R.drawable.glass1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

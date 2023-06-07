@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/hour_ex"
+        android:id="@+id/exercizelayout_hour"
         android:layout_width="137dp"
         android:layout_height="41dp"
         android:layout_alignParentEnd="true"
@@ -20,7 +20,7 @@
         android:textSize="20sp" />
 
     <Switch
-        android:id="@+id/switch5"
+        android:id="@+id/exercizelayout_switch"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_alignParentEnd="true"
@@ -32,28 +32,28 @@
         android:minHeight="48dp" />
 
     <TextView
-        android:id="@+id/ex_restitle"
+        android:id="@+id/exercizelayout_restitle"
         android:layout_width="120dp"
         android:layout_height="53dp"
         android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="78dp"
-        android:layout_toStartOf="@+id/hour_ex"
+        android:layout_toStartOf="@+id/exercizelayout_hour"
         android:text="Pushup"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/ex_repstext"
+        android:id="@+id/exercizelayout_repstext"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="108dp"
         android:layout_marginBottom="20dp"
-        android:layout_toStartOf="@+id/switch5"
+        android:layout_toStartOf="@+id/exercizelayout_switch"
         android:text="30 Times"
         android:textAlignment="center"
         android:textSize="20sp" />
