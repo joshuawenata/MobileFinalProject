@@ -28,19 +28,19 @@ public class caloryneeds extends AppCompatActivity {
         setContentView(R.layout.activity_caloryneeds);
 
         // TextView declaration
-        calheight = (TextView) findViewById(R.id.calheight_number);
-        calweight = (TextView) findViewById(R.id.calweight_number);
-        calage = (TextView) findViewById(R.id.calage_number);
-        calView = (TextView) findViewById(R.id.cal_view);
+        calheight = (TextView) findViewById(R.id.caloryneeds_height_number);
+        calweight = (TextView) findViewById(R.id.caloryneeds_weight_number);
+        calage = (TextView) findViewById(R.id.caloryneeds_age_number);
+        calView = (TextView) findViewById(R.id.caloryneeds_view);
 
         // SeekBar declaration
-        height_bar = (SeekBar) findViewById(R.id.calheight_seekbar);
-        weight_bar = (SeekBar) findViewById(R.id.calweight_seekbar);
-        age_bar = (SeekBar) findViewById(R.id.calage_seekbar);
+        height_bar = (SeekBar) findViewById(R.id.caloryneeds_height_seekbar);
+        weight_bar = (SeekBar) findViewById(R.id.caloryneeds_weight_seekbar);
+        age_bar = (SeekBar) findViewById(R.id.caloryneeds_age_seekbar);
 
         // RelativeLayout declaration
-        RelativeLayout male = findViewById(R.id.maleview_layoutcal);
-        RelativeLayout female = findViewById(R.id.femaleview_layoutcal);
+        RelativeLayout male = findViewById(R.id.caloryneeds_maleview_layout);
+        RelativeLayout female = findViewById(R.id.caloryneeds_femaleview_layout);
 
         // Disables the sliders unless a gender has been selected
         height_bar.setEnabled(false);
