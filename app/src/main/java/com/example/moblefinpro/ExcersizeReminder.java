@@ -18,8 +18,8 @@ public class ExcersizeReminder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excersize_reminder);
-        Button btnMove = findViewById(R.id.intentbtn_ex);
-        RecyclerView recyclerView = findViewById(R.id.recyclerView_ex);
+        Button btnMove = findViewById(R.id.excersize_reminder_intentbtn);
+        RecyclerView recyclerView = findViewById(R.id.excersize_reminder_recyclerView);
 
         btnMove.setOnClickListener(new View.OnClickListener() {
             @Override
