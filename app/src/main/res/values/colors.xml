@@ -8,4 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="tosca">#C5FFFC</color>
+    <color name="blue_light">#6bcff6</color>
+    <color name="blue_middle">#008bff</color>
+    <color name="blue_dark">#0b5394</color>
+    <color name="purple_light">#afc0fb</color>
+    <color name="purple_middle">#7795FF</color>
+    <color name="purple_dark">#FF3700B3</color>
 </resources>
