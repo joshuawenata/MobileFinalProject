@@ -116,7 +116,6 @@ public class landing_page extends AppCompatActivity {
                             }
                             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                             startActivity(intent);
-                            finish();
                         } else {
                             Toast.makeText(landing_page.this, "Sorry auth failed.", Toast.LENGTH_SHORT).show();
                         }
