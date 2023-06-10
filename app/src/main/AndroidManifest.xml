@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Moblefinpro"
         tools:targetApi="31">
         <activity
+            android:name=".landing_page"
+            android:exported="false" />
+        <activity
             android:name=".loadingscreen"
             android:exported="false" />
         <activity
