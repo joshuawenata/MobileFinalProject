@@ -19,7 +19,13 @@
             android:exported="false" />
         <activity
             android:name=".loadingscreen"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".loginpage"
             android:exported="false" />
@@ -28,13 +34,7 @@
 
         <activity
             android:name=".registerpage"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".WaterReminder"
             android:exported="false" />
