@@ -6,17 +6,17 @@ Your Daily Application is an Android Studio powered app project that aims to hel
 
 ## Features
 
-- BMI Calculator: Calclulate BMI according to their weight and height.
+- BMI Calculator: Calculate BMI according to their weight and height.
 
-- Calories Calculator: Calclulate BMI according to their weight, age and height.
+- Calories Calculator: Calculate BMI according to their weight, age and height.
 
 - Water Tracker: Users can track their daily water intake and set goals for themselves. The app provides statistics and visualizations to help users stay motivated.
 
 - Sleep Reminder: The app provides users with daily sleep time reminders so that they will have enough sleep time.
 
-- Excersize Reminder: Users can use the excersize reminder to help them improve and keep their body in shape.
+- Exercise Reminder: Users can use the exercise reminder to help them improve and keep their body in shape.
 
-- Eat Reminder: Users are reminded to eat for atleast 3 time periods, lunch, breakfast and dinner. The reminder can be deactivated.
+- Eat Reminder: Users are reminded to eat for at least 3 time periods, lunch, breakfast and dinner. The reminder can be deactivated.
 
 ## Technologies Used
 

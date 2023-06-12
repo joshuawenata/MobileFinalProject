@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class caloryneeds extends AppCompatActivity {
 
@@ -46,6 +47,8 @@ public class caloryneeds extends AppCompatActivity {
         height_bar.setEnabled(false);
         weight_bar.setEnabled(false);
         age_bar.setEnabled(false);
+
+        Toast.makeText(this, "Please select your gender first!", Toast.LENGTH_LONG).show();
 
         // When male layout is chosen
         male.setOnClickListener(new View.OnClickListener() {
