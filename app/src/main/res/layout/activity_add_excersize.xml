@@ -7,7 +7,7 @@
     tools:context=".AddExcersize">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout4"
+        android:id="@+id/add_excersize_relativeLayout"
         android:layout_width="400dp"
         android:layout_height="500dp"
         android:layout_marginStart="4dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/set_textexadd"
+            android:id="@+id/add_excersize_set_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -29,7 +29,7 @@
             android:text="Set Excersize Name" />
 
         <TextView
-            android:id="@+id/ask_text_exadd"
+            android:id="@+id/add_excersize_ask_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -39,7 +39,7 @@
             android:text="how many times?" />
 
         <TimePicker
-            android:id="@+id/exadd_simpleTimePicker"
+            android:id="@+id/add_excersize_simpleTimePicker"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_alignParentStart="false"
@@ -52,7 +52,7 @@
             android:timePickerMode="spinner" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/add_excersize_button"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -62,7 +62,7 @@
             android:text="Button" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/add_excersize_editTextTextPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -76,14 +76,14 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/add_extitle"
+        android:id="@+id/add_excersize_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Set New Excersize!"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
+        app:layout_constraintBottom_toTopOf="@+id/add_excersize_relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

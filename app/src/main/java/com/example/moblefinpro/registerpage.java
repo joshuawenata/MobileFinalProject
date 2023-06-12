@@ -31,25 +31,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class registerpage extends AppCompatActivity {
 
-    private GoogleSignInClient mGoogleSignInClient;
-    private final static int RC_SIGN_IN = 123;
     private FirebaseAuth mAuth;
 
-    private EditText username, email, password;
+    private EditText username, email, password, confirmpassword;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user!=null){
-            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,106 +42,63 @@ public class registerpage extends AppCompatActivity {
         setContentView(R.layout.activity_registerpage);
         FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
-        createRequest();
         initialize();
     }
 
     private void initialize() {
-        username = findViewById(R.id.username);
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
+        username = findViewById(R.id.registerpage_username);
+        email = findViewById(R.id.registerpage_email);
+        password = findViewById(R.id.registerpage_password);
+        confirmpassword = findViewById(R.id.registerpage_repassword);
     }
 
-    private void createRequest() {
-        // Configure Google Sign In
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
+    public void signUpEmail(View view) {
+        boolean flag = true;
+        String usernameVal = username.getText().toString();
+        String emailVal = email.getText().toString();
+        String passwordVal = password.getText().toString();
+        String confirmPasswordVal = confirmpassword.getText().toString();
 
-        // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-    }
-
-    public void signUpGoogle(View view) {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuthWithGoogle(account);
-            } catch (ApiException e) {
-                // Google Sign In failed, update UI appropriately
-                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
+        if(usernameVal.isEmpty()){
+            Toast.makeText(registerpage.this, "username need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(emailVal.isEmpty()){
+            Toast.makeText(registerpage.this, "email need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(passwordVal.isEmpty()){
+            Toast.makeText(registerpage.this, "password need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(confirmPasswordVal.isEmpty()){
+            Toast.makeText(registerpage.this, "confirm password need to be filled!", Toast.LENGTH_SHORT).show();
+            flag = false;
+        }else if(!confirmPasswordVal.equals(passwordVal)){
+            Toast.makeText(registerpage.this, "password and confirm password need to be match!", Toast.LENGTH_SHORT).show();
+            flag = false;
         }
-    }
 
-
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-
-
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+        if(flag){
+            mAuth.createUserWithEmailAndPassword(emailVal, passwordVal)
+                    .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                            // User registration successful
                             FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                            // You can perform further actions, such as updating user profile or navigating to the next screen
                             if(firebaseUser != null){
                                 String userId = firebaseUser.getUid();
                                 DatabaseReference myRef = database.getReference().child("Users").push();
                                 myRef.child("userId").setValue(userId);
-                                myRef.child("username").setValue(firebaseUser.getDisplayName());
+                                myRef.child("username").setValue(usernameVal);
                                 myRef.child("email").setValue(firebaseUser.getEmail());
                             }
-                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                            startActivity(intent);
+                            startActivity(new Intent(registerpage.this, loginpage.class));
                             finish();
                         } else {
-                            Toast.makeText(registerpage.this, "Sorry auth failed.", Toast.LENGTH_SHORT).show();
+                            // User registration failed
+                            String errorMessage = task.getException().getMessage();
+                            // Handle the error appropriately
+                            Toast.makeText(registerpage.this, errorMessage, Toast.LENGTH_SHORT).show();
                         }
-
-                    }
-                });
-    }
-
-    public void signUpEmail(View view) {
-        String emailVal = email.getText().toString();
-        String passwordVal = password.getText().toString();
-        String usernameVal = username.getText().toString();
-        mAuth.createUserWithEmailAndPassword(emailVal, passwordVal)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        // User registration successful
-                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                        // You can perform further actions, such as updating user profile or navigating to the next screen
-                        if(firebaseUser != null){
-                            String userId = firebaseUser.getUid();
-                            DatabaseReference myRef = database.getReference().child("Users").push();
-                            myRef.child("userId").setValue(userId);
-                            myRef.child("username").setValue(usernameVal);
-                            myRef.child("email").setValue(firebaseUser.getEmail());
-                        }
-                        startActivity(new Intent(registerpage.this, loginpage.class));
-                        finish();
-                    } else {
-                        // User registration failed
-                        String errorMessage = task.getException().getMessage();
-                        // Handle the error appropriately
-                        Toast.makeText(registerpage.this, errorMessage, Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    });
+        }
     }
 }

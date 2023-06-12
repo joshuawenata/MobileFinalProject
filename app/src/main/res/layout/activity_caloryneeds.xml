@@ -7,7 +7,7 @@
     tools:context=".caloryneeds">
 
     <TextView
-        android:id="@+id/calory_maintext"
+        android:id="@+id/caloryneeds_maintext"
         android:layout_width="303dp"
         android:layout_height="43dp"
         android:background="@drawable/curved_textview"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.046" />
 
     <RelativeLayout
-        android:id="@+id/calorymain_layout"
+        android:id="@+id/caloryneeds_main_layout"
         android:layout_width="300dp"
         android:layout_height="500dp"
         android:layout_marginEnd="52dp"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <RelativeLayout
-            android:id="@+id/calage_layout"
+            android:id="@+id/caloryneeds_age_layout"
             android:layout_width="88dp"
             android:layout_height="108dp"
             android:layout_alignParentStart="true"
@@ -49,7 +49,7 @@
             android:backgroundTint="#A2F1E8">
 
             <TextView
-                android:id="@+id/calage_number"
+                android:id="@+id/caloryneeds_age_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -62,7 +62,7 @@
                 android:text="1" />
 
             <SeekBar
-                android:id="@+id/calage_seekbar"
+                android:id="@+id/caloryneeds_age_seekbar"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -75,7 +75,7 @@
                 tools:layout_editor_absoluteY="422dp" />
 
             <TextView
-                android:id="@+id/calage_text"
+                android:id="@+id/caloryneeds_age_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -92,7 +92,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/calweight_layout"
+            android:id="@+id/caloryneeds_weight_layout"
             android:layout_width="88dp"
             android:layout_height="108dp"
             android:layout_alignParentStart="true"
@@ -105,7 +105,7 @@
             android:backgroundTint="#A2F1E8">
 
             <TextView
-                android:id="@+id/calweight_number"
+                android:id="@+id/caloryneeds_weight_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -118,7 +118,7 @@
                 android:text="1" />
 
             <SeekBar
-                android:id="@+id/calweight_seekbar"
+                android:id="@+id/caloryneeds_weight_seekbar"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -131,7 +131,7 @@
                 tools:layout_editor_absoluteY="422dp" />
 
             <TextView
-                android:id="@+id/calweight_text"
+                android:id="@+id/caloryneeds_weight_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -148,7 +148,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/maleview_layoutcal"
+            android:id="@+id/caloryneeds_maleview_layout"
             android:layout_width="100dp"
             android:layout_height="125dp"
             android:layout_alignParentStart="true"
@@ -158,10 +158,10 @@
             android:background="@color/white">
 
             <ImageView
-                android:id="@+id/maleview_cal"
+                android:id="@+id/caloryneeds_maleview"
                 android:layout_width="65dp"
                 android:layout_height="68dp"
-                android:layout_above="@+id/textView_malecal"
+                android:layout_above="@+id/caloryneeds_textView_male"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
@@ -172,7 +172,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/textView_malecal"
+                android:id="@+id/caloryneeds_textView_male"
                 android:layout_width="57dp"
                 android:layout_height="33dp"
                 android:layout_alignParentStart="true"
@@ -187,7 +187,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/femaleview_layoutcal"
+            android:id="@+id/caloryneeds_femaleview_layout"
             android:layout_width="100dp"
             android:layout_height="125dp"
             android:layout_alignParentTop="true"
@@ -197,10 +197,10 @@
             android:background="#8C8181">
 
             <ImageView
-                android:id="@+id/femaleview_cal"
+                android:id="@+id/caloryneeds_femaleview"
                 android:layout_width="65dp"
                 android:layout_height="68dp"
-                android:layout_above="@+id/textView_femalecal"
+                android:layout_above="@+id/caloryneeds_textView_female"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
@@ -211,7 +211,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/textView_femalecal"
+                android:id="@+id/caloryneeds_textView_female"
                 android:layout_width="57dp"
                 android:layout_height="33dp"
                 android:layout_alignParentStart="true"
@@ -226,10 +226,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/calheight_layout"
+            android:id="@+id/caloryneeds_height_layout"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:layout_above="@+id/calweight_layout"
+            android:layout_above="@+id/caloryneeds_weight_layout"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="50dp"
@@ -239,7 +239,7 @@
             android:backgroundTint="#5BD6C8">
 
             <TextView
-                android:id="@+id/calheight_number"
+                android:id="@+id/caloryneeds_height_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -252,7 +252,7 @@
                 android:text="90" />
 
             <SeekBar
-                android:id="@+id/calheight_seekbar"
+                android:id="@+id/caloryneeds_height_seekbar"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -263,7 +263,7 @@
                 tools:layout_editor_absoluteY="422dp" />
 
             <TextView
-                android:id="@+id/calheight_text"
+                android:id="@+id/caloryneeds_height_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -284,7 +284,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/calory_secondarylayout"
+        android:id="@+id/caloryneeds_secondarylayout"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginStart="56dp"
@@ -296,11 +296,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calorymain_layout"
+        app:layout_constraintTop_toBottomOf="@+id/caloryneeds_main_layout"
         app:layout_constraintVertical_bias="0.906">
 
         <TextView
-            android:id="@+id/cal_title"
+            android:id="@+id/caloryneeds__title"
             android:layout_width="192dp"
             android:layout_height="32dp"
             android:layout_alignParentStart="true"
@@ -321,7 +321,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/cal_view"
+            android:id="@+id/caloryneeds_view"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:layout_alignParentStart="true"

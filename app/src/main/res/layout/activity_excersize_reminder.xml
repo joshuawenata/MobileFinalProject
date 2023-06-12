@@ -7,7 +7,7 @@
     android:background="#C9F3EF">
 
     <TextView
-        android:id="@+id/ex_title"
+        android:id="@+id/excersize_reminder_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
-        android:id="@+id/layoutmain_ex"
+        android:id="@+id/excersize_reminder_layoutmain"
         android:layout_width="409dp"
         android:layout_height="604dp"
 
@@ -29,20 +29,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_ex"
+            android:id="@+id/excersize_reminder_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </RelativeLayout>
 
     <Button
-        android:id="@+id/intentbtn_ex"
+        android:id="@+id/excersize_reminder_intentbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Add Excersize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toEndOf="@+id/ex_title"
+        app:layout_constraintStart_toEndOf="@+id/excersize_reminder_title"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
