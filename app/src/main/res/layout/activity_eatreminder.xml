@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,7 +11,11 @@
         android:id="@+id/eatreminder_view"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="675dp"
         android:background="@drawable/curved_layout"
         android:backgroundTint="@color/white"
         android:text="Eat Reminder"
@@ -26,7 +30,10 @@
     <RelativeLayout
         android:layout_width="250dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="469dp"
         android:background="@drawable/curved_layout"
         android:backgroundTint="#9ED6CA"
         app:layout_constraintBottom_toTopOf="@+id/eatreminder_relativeLayout2"
@@ -68,11 +75,30 @@
 
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/eatreminder_imgBreakfast"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="278dp"
+        android:layout_marginBottom="547dp"
+        android:src="@drawable/breakfast"
+        app:layout_constraintBottom_toTopOf="@+id/eatreminder_imgLunch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eatreminder_view"
+        app:layout_constraintVertical_bias="0.826"/>
+
     <RelativeLayout
         android:id="@+id/eatreminder_relativeLayout"
         android:layout_width="250dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="56dp"
         android:background="@drawable/curved_layout"
         android:backgroundTint="#196665"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,11 +141,28 @@
             android:text="18:00 AM" />
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/eatreminder_imgLunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="278dp"
+        android:layout_marginBottom="131dp"
+        android:src="@drawable/lunch"
+        app:layout_constraintBottom_toTopOf="@+id/eatreminder_imgDinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <RelativeLayout
         android:id="@+id/eatreminder_relativeLayout2"
         android:layout_width="250dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="268dp"
         android:background="@drawable/curved_layout"
         android:backgroundTint="#62958F"
         app:layout_constraintBottom_toTopOf="@+id/eatreminder_relativeLayout"
@@ -164,38 +207,17 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/eatreminder_imgLunch"
-        android:layout_width="83dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="96dp"
-        app:layout_constraintBottom_toTopOf="@+id/eatreminder_imgDinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
         android:id="@+id/eatreminder_imgDinner"
-        android:layout_width="83dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="180dp"
+        android:layout_width="wrap_content"
+        android:layout_height="119dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="277dp"
+        android:layout_marginBottom="350dp"
+        android:src="@drawable/dinner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/eatreminder_imgBreakfast"
-        android:layout_width="83dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="96dp"
-        app:layout_constraintBottom_toTopOf="@+id/eatreminder_imgLunch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eatreminder_view"
-        app:layout_constraintVertical_bias="0.826"
-        tools:srcCompat="@tools:sample/avatars" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
