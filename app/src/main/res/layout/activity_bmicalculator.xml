@@ -109,6 +109,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="68dp"
+            android:backgroundTint="#16BFBF"
+            android:textColor="@color/black"
             android:text="Reset" />
 
         <Button
@@ -120,6 +122,8 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="31dp"
             android:layout_marginBottom="68dp"
+            android:backgroundTint="#16BFBF"
+            android:textColor="@color/black"
             android:layout_toStartOf="@+id/bmicalculator_resetbutton"
             android:text="CALCULATE BMI"
             android:textSize="11sp" />
@@ -233,14 +237,14 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/bmicalculator_statustext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/bmicalculator_height_layout"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="114dp"
-            android:layout_marginBottom="15dp"
-            android:text="Male"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="-410dp"
+            android:text="Obese"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
