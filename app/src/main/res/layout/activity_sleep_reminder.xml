@@ -152,7 +152,7 @@
 
 
             <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/breakfast_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -195,7 +195,7 @@
 
 
             <Switch
-                android:id="@+id/switch2"
+                android:id="@+id/lunch_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
