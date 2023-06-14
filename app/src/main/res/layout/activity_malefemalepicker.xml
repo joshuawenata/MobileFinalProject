@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tosca"
+    tools:context=".malefemalepicker">
+
+
+    <TextView
+        android:id="@+id/malefemalepicker_title"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="37dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Choose your Gender!"
+        android:textSize="50sp" />
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="123dp"
+        android:background="@drawable/curved_relativelayout"
+        android:backgroundTint="#C9F3F4"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/malefemalepicker_femaleview_layout"
+            android:layout_width="145dp"
+            android:layout_height="178dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="34dp"
+            android:background="#8C8181">
+
+            <ImageView
+                android:id="@+id/malefemalepicker_femaleview"
+                android:layout_width="111dp"
+                android:layout_height="120dp"
+                android:layout_above="@+id/malefemalepicker_textView_female"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/femalepic" />
+
+            <TextView
+                android:id="@+id/malefemalepicker_textView_female"
+                android:layout_width="57dp"
+                android:layout_height="33dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="Female"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/malefemalepicker_maleview_layout"
+            android:layout_width="145dp"
+            android:layout_height="178dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="62dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/malefemalepicker_maleview"
+                android:layout_width="119dp"
+                android:layout_height="124dp"
+                android:layout_above="@+id/malefemalepicker_textView_male"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:src="@drawable/malepic" />
+
+            <TextView
+                android:id="@+id/malefemalepicker_textView_male"
+                android:layout_width="57dp"
+                android:layout_height="33dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="Male"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/malefemalepicker_textselection"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="267dp"
+            android:layout_marginBottom="13dp"
+            android:gravity="center"
+            android:text="Male Selected"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/malefemalepicker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="42dp"
+        android:text="Button" />
+
+</RelativeLayout>

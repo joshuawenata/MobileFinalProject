@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/tosca"
     tools:context=".bmicalculator">
 
     <TextView
-        android:id="@+id/bmi_maintext"
+        android:id="@+id/bmicalculator_maintext"
         android:layout_width="303dp"
         android:layout_height="43dp"
+        android:layout_above="@+id/bmicalculator_mainlayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="18dp"
         android:background="@drawable/curved_textview"
         android:backgroundTint="#5BD6C8"
         android:gravity="center"
         android:text="BMI Calculator"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,22 +29,24 @@
         app:layout_constraintVertical_bias="0.046" />
 
     <RelativeLayout
-        android:id="@+id/bmi_secondarylayout"
+        android:id="@+id/bmicalculator_secondarylayout"
         android:layout_width="300dp"
         android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="56dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/curved_relativelayout"
         android:backgroundTint="#16BFBF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmi_mainlayout"
+        app:layout_constraintTop_toBottomOf="@+id/bmicalculator_mainlayout"
         app:layout_constraintVertical_bias="0.921">
 
         <TextView
-            android:id="@+id/bmi_title4"
+            android:id="@+id/bmicalculator_title"
             android:layout_width="192dp"
             android:layout_height="32dp"
             android:layout_alignParentStart="true"
@@ -61,7 +67,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/bmi_view"
+            android:id="@+id/bmicalculator_view"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:layout_alignParentStart="true"
@@ -79,57 +85,64 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:gravity="center"
-        android:id="@+id/bmi_mainlayout"
+        android:id="@+id/bmicalculator_mainlayout"
         android:layout_width="300dp"
         android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="120dp"
-        android:backgroundTint="#C9F3F4"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="156dp"
         android:background="@drawable/curved_relativelayout"
+        android:backgroundTint="#C9F3F4"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmi_maintext">
+        app:layout_constraintTop_toBottomOf="@+id/bmicalculator_maintext">
 
         <Button
-            android:id="@+id/calcbutton"
+            android:id="@+id/bmicalculator_resetbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="68dp"
+            android:backgroundTint="#16BFBF"
+            android:textColor="@color/black"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/bmicalculator_calcbutton"
             android:layout_width="131dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="31dp"
-            android:layout_marginBottom="15dp"
-            android:layout_toStartOf="@+id/resetbutton"
+            android:layout_marginBottom="68dp"
+            android:backgroundTint="#16BFBF"
+            android:textColor="@color/black"
+            android:layout_toStartOf="@+id/bmicalculator_resetbutton"
             android:text="CALCULATE BMI"
             android:textSize="11sp" />
 
-        <Button
-            android:id="@+id/resetbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="15dp"
-            android:text="Reset" />
-
         <RelativeLayout
-            android:id="@+id/bmiheight_layout"
+            android:id="@+id/bmicalculator_height_layout"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="213dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="312dp"
             android:background="@drawable/extra_curved30"
             android:backgroundTint="#5BD6C8">
 
             <TextView
-                android:id="@+id/bmiheight_number"
+                android:id="@+id/bmicalculator_height_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -142,7 +155,7 @@
                 android:text="90" />
 
             <SeekBar
-                android:id="@+id/bmiheight_seekbar"
+                android:id="@+id/bmicalculator_height_seekbar"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -153,7 +166,7 @@
                 tools:layout_editor_absoluteY="422dp" />
 
             <TextView
-                android:id="@+id/bmiheight_text"
+                android:id="@+id/bmicalculator_height_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -169,22 +182,22 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/bmiweight_layout"
+            android:id="@+id/bmicalculator_weight_layout"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="84dp"
-            android:backgroundTint="#A2F1E8"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="164dp"
             android:background="@drawable/extra_curved30"
+            android:backgroundTint="#A2F1E8"
             tools:layout_editor_absoluteX="-72dp"
             tools:layout_editor_absoluteY="332dp">
 
             <TextView
-                android:id="@+id/bmiweight_number"
+                android:id="@+id/bmicalculator_weight_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -197,7 +210,7 @@
                 android:text="1" />
 
             <SeekBar
-                android:id="@+id/bmiweight_seekbar"
+                android:id="@+id/bmicalculator_weight_seekbar"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -208,7 +221,7 @@
                 tools:layout_editor_absoluteY="422dp" />
 
             <TextView
-                android:id="@+id/bmiweight_text"
+                android:id="@+id/bmicalculator_weight_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -223,84 +236,19 @@
                 android:text="Weight" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/maleview_layoutbmi"
-            android:layout_width="100dp"
-            android:layout_height="125dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="21dp"
-            android:background="@color/white">
-
-            <ImageView
-                android:id="@+id/maleview_bmi"
-                android:layout_width="65dp"
-                android:layout_height="68dp"
-                android:layout_above="@+id/textView_malebmi"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="11dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/textView_malebmi"
-                android:layout_width="57dp"
-                android:layout_height="33dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:text="Male"
-                android:textAlignment="center" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/femaleview_layoutbmi"
-            android:layout_width="100dp"
-            android:layout_height="125dp"
-            android:layout_alignParentTop="true"
+        <TextView
+            android:id="@+id/bmicalculator_statustext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bmicalculator_height_layout"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="46dp"
-            android:background="#8C8181">
-
-            <ImageView
-                android:id="@+id/femaleview_bmi"
-                android:layout_width="65dp"
-                android:layout_height="68dp"
-                android:layout_above="@+id/textView_femalebmi"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="11dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/textView_femalebmi"
-                android:layout_width="57dp"
-                android:layout_height="33dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="12dp"
-                android:text="Female"
-                android:gravity="center"
-                android:textAlignment="center" />
-        </RelativeLayout>
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="-410dp"
+            android:text="Obese"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -15,8 +15,8 @@ public class excersizeLayout extends RecyclerView.ViewHolder {
 
     public excersizeLayout(@NonNull View itemView) {
         super(itemView);
-        nameView = itemView.findViewById(R.id.ex_restitle);
-        repstitles = itemView.findViewById(R.id.ex_repstext);
-        hourtitle = itemView.findViewById(R.id.hour_ex);
+        nameView = itemView.findViewById(R.id.exercizelayout_restitle);
+        repstitles = itemView.findViewById(R.id.exercizelayout_repstext);
+        hourtitle = itemView.findViewById(R.id.exercizelayout_hour);
     }
 }

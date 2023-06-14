@@ -29,15 +29,15 @@ public class bmicalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmicalculator);
 
-        bmi_weight = (TextView) findViewById(R.id.bmiweight_number);
-        bmi_height = (TextView) findViewById(R.id.bmiheight_number);
-        bmi_view = (TextView) findViewById(R.id.bmi_view);
+        bmi_weight = (TextView) findViewById(R.id.bmicalculator_weight_number);
+        bmi_height = (TextView) findViewById(R.id.bmicalculator_height_number);
+        bmi_view = (TextView) findViewById(R.id.bmicalculator_view);
 
-        weight_bar = (SeekBar) findViewById(R.id.bmiweight_seekbar);
-        height_bar = (SeekBar) findViewById(R.id.bmiheight_seekbar);
+        weight_bar = (SeekBar) findViewById(R.id.bmicalculator_weight_seekbar);
+        height_bar = (SeekBar) findViewById(R.id.bmicalculator_height_seekbar);
 
-        Button confirmButton = (Button) findViewById(R.id.calcbutton);
-        Button resetButton = (Button) findViewById(R.id.resetbutton);
+        Button confirmButton = (Button) findViewById(R.id.bmicalculator_calcbutton);
+        Button resetButton = (Button) findViewById(R.id.bmicalculator_resetbutton);
 
         // Height bar values adjusting
         height_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {

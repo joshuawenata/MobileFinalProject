@@ -22,12 +22,12 @@ public class SleepReminder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sleep_reminder);
 
-        Button pickTimeBtn = findViewById(R.id.sleep_bedtimebutton);
-        Button pickTimeBtn1 = findViewById(R.id.sleep_bedtimebutton2);
-        TextView selectedTimeTV = findViewById(R.id.sleep_switchview3);
-        TextView selectedTimeTV1 = findViewById(R.id.sleep_switchview4);
-        TimePicker bedtime = findViewById(R.id.bedtime);
-        TimePicker wakeup = findViewById(R.id.wakeup);
+        Button bedtimePickTimeBtn = findViewById(R.id.sleep_reminder_bedtimebutton);
+        Button wakeUpPickTimeBtn = findViewById(R.id.sleep_reminder_wakeupbutton);
+        TextView bedTimeSelectedTimeTV = findViewById(R.id.sleep_reminder_switchbedtime);
+        TextView wakeUpSelectedTimeTV = findViewById(R.id.sleep_reminder_switchwakeup);
+        TimePicker bedtime = findViewById(R.id.sleep_reminder_bedtime);
+        TimePicker wakeup = findViewById(R.id.sleep_reminder_wakeup);
         Context context = this;
 
         Intent w = new Intent(context, WakeUpNotificationReceiver.class);
@@ -46,7 +46,7 @@ public class SleepReminder extends AppCompatActivity {
 
         // on below line we are adding click
         // listener for our pick date button
-        pickTimeBtn.setOnClickListener(new View.OnClickListener() {
+        bedtimePickTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // on below line we are getting the
@@ -65,7 +65,7 @@ public class SleepReminder extends AppCompatActivity {
                                                   int minute) {
                                 // on below line we are setting selected time
                                 // in our text view.
-                                selectedTimeTV.setText(hourOfDay + ":" + minute);
+                                bedTimeSelectedTimeTV.setText(hourOfDay + ":" + minute);
                             }
                         }, hour, minute, false);
                 // at last we are calling show to

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
 <!-- harus di resize kyknya, -->
+
     <RelativeLayout
-        android:id="@+id/menu_layout"
+        android:id="@+id/main_menu_layout"
         android:layout_width="415dp"
         android:layout_height="604dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/extra_curved30"
         android:backgroundTint="#C9F3F4"
         android:gravity="center"
@@ -21,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/menu_maintext"
+            android:id="@+id/main_menu_text"
             android:layout_width="363dp"
             android:layout_height="28dp"
             android:layout_alignParentStart="true"
@@ -36,10 +37,10 @@
             android:textSize="25dp" />
 
         <View
-            android:id="@+id/horizontal_linemain"
+            android:id="@+id/main_horizontal_line"
             android:layout_width="363dp"
             android:layout_height="1dp"
-            android:layout_alignBottom="@+id/menu_maintext"
+            android:layout_alignBottom="@+id/main_menu_text"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="29dp"
@@ -49,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.152"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/menu_maintext"
+            app:layout_constraintTop_toBottomOf="@id/main_menu_text"
             app:layout_constraintVertical_bias="0.532" />
 
         <ScrollView
@@ -66,22 +67,20 @@
 
                 <!-- First Row -->
                 <TableRow>
-
                     <ImageView
-                        android:layout_width="374dp"
-                        android:layout_height="55dp"
 
+                        android:layout_height="55dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@drawable/table_title"
-                        android:padding="16dp"
-                        android:src="@drawable/image1" />
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#1976D2"
+                        android:padding="10dp"
+                        android:src="@drawable/celebratelogo" />
 
                 </TableRow>
 
                 <!-- Second Row -->
                 <TableRow>
-
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
@@ -90,53 +89,55 @@
 
 
                         <ImageView
-                            android:id="@+id/image1tablemain"
+                            android:id="@+id/main_image1table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
-                            android:layout_toStartOf="@+id/image2tablemain"
-                            android:src="@drawable/image1"
-                            android:onClick="gotoBmi"/>
+                            android:layout_toStartOf="@+id/main_image2table"
+                            android:onClick="gotoBmi"
+                            android:src="@drawable/bmilogo" />
 
                         <TextView
-                            android:id="@+id/text1tablemain"
+                            android:id="@+id/main_text1table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="101dp"
-                            android:layout_marginBottom="9dp"
-                            android:layout_toStartOf="@+id/text2tablemain"
+                            android:layout_marginEnd="92dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toStartOf="@+id/main_text2table"
                             android:gravity="center"
                             android:text="@string/bmi_calculator"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/text2tablemain"
+                            android:id="@+id/main_text2table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="13dp"
-                            android:layout_marginBottom="9dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="7dp"
                             android:gravity="center"
                             android:text="Daily Calorie Needs"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/image2tablemain"
+                            android:id="@+id/main_image2table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
+                            android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
+                            android:layout_marginTop="0dp"
                             android:layout_marginEnd="12dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/image1"
-                            android:onClick="gotoDailyCalory"/>
+                            android:onClick="gotoDailyCalory"
+                            android:src="@drawable/calorielogo" />
 
                     </RelativeLayout>
 
@@ -149,12 +150,12 @@
                     <ImageView
                         android:layout_width="374dp"
                         android:layout_height="55dp"
-
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@drawable/table_title"
-                        android:padding="16dp"
-                        android:src="@drawable/image1" />
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#1976D2"
+                        android:padding="10dp"
+                        android:src="@drawable/alarmlogo" />
 
                 </TableRow>
 
@@ -169,32 +170,32 @@
 
 
                         <ImageView
-                            android:id="@+id/image3tablemain"
+                            android:id="@+id/main_image3table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
-                            android:layout_toStartOf="@+id/image4tablemain"
-                            android:src="@drawable/image1"
-                            android:onClick="gotoEat"/>
+                            android:layout_toStartOf="@+id/main_image4table"
+                            android:onClick="gotoEat"
+                            android:src="@drawable/eatlogo" />
 
                         <TextView
-                            android:id="@+id/text3tablemain"
+                            android:id="@+id/main_text3table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="110dp"
                             android:layout_marginBottom="7dp"
-                            android:layout_toStartOf="@+id/text4tablemain"
+                            android:layout_toStartOf="@+id/main_text4table"
                             android:gravity="center"
                             android:text="Eat Reminder"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/text4tablemain"
+                            android:id="@+id/main_text4table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentEnd="true"
@@ -208,14 +209,14 @@
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/image4tablemain"
+                            android:id="@+id/main_image4table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="12dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/image1"
-                            android:onClick="gotoWater"/>
+                            android:onClick="gotoWater"
+                            android:src="@drawable/waterlogo" />
 
                     </RelativeLayout>
 
@@ -233,53 +234,53 @@
 
 
                         <ImageView
-                            android:id="@+id/image5tablemain"
+                            android:id="@+id/main_image5table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginEnd="111dp"
                             android:layout_marginBottom="29dp"
-                            android:layout_toStartOf="@+id/image6tablemain"
-                            android:src="@drawable/image1"
-                            android:onClick="gotoSleep"/>
+                            android:layout_toStartOf="@+id/main_image6table"
+                            android:onClick="gotoSleep"
+                            android:src="@drawable/iconsleep" />
 
                         <TextView
-                            android:id="@+id/text5tablemain"
+                            android:id="@+id/main_text5table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="133dp"
-                            android:layout_marginBottom="9dp"
-                            android:layout_toStartOf="@+id/text6tablemain"
+                            android:layout_marginEnd="87dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toStartOf="@+id/main_text6table"
                             android:gravity="center"
                             android:text="Sleep Reminder"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/text6tablemain"
+                            android:id="@+id/main_text6table"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="8dp"
-                            android:layout_marginEnd="22dp"
+                            android:layout_marginEnd="1dp"
                             android:layout_marginBottom="9dp"
                             android:gravity="center"
                             android:text="Excersize Reminder"
                             android:textSize="15sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/image6tablemain"
+                            android:id="@+id/main_image6table"
                             android:layout_width="100dp"
                             android:layout_height="71dp"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="12dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/image1"
-                            android:onClick="gotoExercise"/>
+                            android:onClick="gotoExercise"
+                            android:src="@drawable/exlogo" />
 
                     </RelativeLayout>
                 </TableRow>
@@ -292,16 +293,20 @@
         android:id="@+id/main_title"
         android:layout_width="201dp"
         android:layout_height="107dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="203dp"
+        android:layout_marginBottom="617dp"
         android:text="Your Daily Application"
         android:textColor="@color/white"
         android:textSize="36dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/menu_layout"
+        app:layout_constraintBottom_toTopOf="@+id/main_menu_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.532" />
+        app:layout_constraintVertical_bias="0.39" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

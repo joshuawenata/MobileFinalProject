@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,29 +9,34 @@
     tools:context=".WaterReminder">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout3"
+        android:id="@+id/water_reminder_relativeLayout"
         android:layout_width="409dp"
         android:layout_height="529dp"
-        android:layout_marginTop="204dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="4dp"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/changeWater_button"
+            android:id="@+id/water_reminder_changeWaterButton"
             android:layout_width="126dp"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="139dp"
-            android:layout_marginEnd="144dp"
-            android:layout_marginBottom="58dp"
-            android:background="#5BD5C7"
-            android:text="Button" />
+            android:layout_marginStart="146dp"
+            android:layout_marginEnd="137dp"
+            android:layout_marginBottom="59dp"
+            android:background="@drawable/curved_relativelayout"
+            android:backgroundTint="#16BFBF"
+            android:text="DRINK"
+            android:textColor="@color/white" />
 
         <ImageView
-            android:id="@+id/changeWater_image"
+            android:id="@+id/water_reminder_changeWaterImage"
             android:layout_width="300dp"
             android:layout_height="400dp"
             android:layout_alignParentStart="true"
@@ -46,7 +51,7 @@
             app:srcCompat="@drawable/glass1" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/water_reminder_textView2L"
             android:layout_width="54dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -78,7 +83,7 @@
             android:background="@android:color/black" />
 
         <View
-            android:id="@+id/view"
+            android:id="@+id/water_reminder_view"
             android:layout_width="20dp"
             android:layout_height="3dp"
             android:layout_alignParentStart="true"
@@ -88,7 +93,7 @@
             android:background="@android:color/black" />
 
         <View
-            android:id="@+id/view2"
+            android:id="@+id/water_reminder_view2"
             android:layout_width="20dp"
             android:layout_height="3dp"
             android:layout_alignParentStart="true"
@@ -98,7 +103,7 @@
             android:background="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/water_reminder_textView3L"
             android:layout_width="54dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -111,7 +116,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/water_reminder_textView1L"
             android:layout_width="54dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -130,10 +135,15 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="614dp"
         android:text="Let's Hydrate"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/water_reminder_relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,9 +151,13 @@
         app:layout_constraintVertical_bias="0.475" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/water_reminder_textView"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="514dp"
         android:background="@drawable/curved_textview"
         android:backgroundTint="@color/white"
         android:gravity="center"
@@ -159,4 +173,4 @@
         app:layout_constraintVertical_bias="0.259" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

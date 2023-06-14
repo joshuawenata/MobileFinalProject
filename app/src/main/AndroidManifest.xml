@@ -12,8 +12,23 @@
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Moblefinpro"
+        android:theme="@style/Theme.Moblefinpro.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".malefemalepicker"
+            android:exported="false" />
+        <activity
+            android:name=".landing_page"
+            android:exported="false" />
+        <activity
+            android:name=".loadingscreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".loginpage"
             android:exported="false" />
@@ -22,13 +37,7 @@
 
         <activity
             android:name=".registerpage"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".WaterReminder"
             android:exported="false" />
@@ -52,8 +61,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
     </application>
 
 </manifest>
