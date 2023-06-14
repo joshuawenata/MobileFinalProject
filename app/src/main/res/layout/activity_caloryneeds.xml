@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".caloryneeds">
 
+
     <TextView
         android:id="@+id/caloryneeds_maintext"
         android:layout_width="303dp"
         android:layout_height="43dp"
+        android:layout_above="@+id/caloryneeds_main_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/curved_textview"
         android:backgroundTint="#48B5A8"
         android:gravity="center"
         android:text="Daily Calories Need"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,12 +33,68 @@
         android:id="@+id/caloryneeds_main_layout"
         android:layout_width="300dp"
         android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="149dp"
         android:background="@drawable/curved_relativelayout"
         android:backgroundTint="#C9F3F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/caloryneeds_height_layout"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/caloryneeds_weight_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="62dp"
+            android:background="@drawable/extra_curved30"
+            android:backgroundTint="#5BD6C8">
+
+            <TextView
+                android:id="@+id/caloryneeds_height_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="72dp"
+                android:layout_marginBottom="39dp"
+                android:gravity="center"
+                android:text="90" />
+
+            <SeekBar
+                android:id="@+id/caloryneeds_height_seekbar"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="18dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="422dp" />
+
+            <TextView
+                android:id="@+id/caloryneeds_height_text"
+                android:layout_width="49dp"
+                android:layout_height="17dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginBottom="65dp"
+                android:gravity="center"
+                android:text="Height"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/caloryneeds_age_layout"
@@ -147,148 +208,44 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/caloryneeds_maleview_layout"
-            android:layout_width="100dp"
-            android:layout_height="125dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="40dp"
-            android:background="@color/white">
 
-            <ImageView
-                android:id="@+id/caloryneeds_maleview"
-                android:layout_width="65dp"
-                android:layout_height="68dp"
-                android:layout_above="@+id/caloryneeds_textView_male"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="11dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/caloryneeds_textView_male"
-                android:layout_width="57dp"
-                android:layout_height="33dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:text="Male"
-                android:textAlignment="center" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/caloryneeds_femaleview_layout"
-            android:layout_width="100dp"
-            android:layout_height="125dp"
-            android:layout_alignParentTop="true"
+        <Spinner
+            android:id="@+id/caloryneeds_spinner"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/caloryneeds_height_layout"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="45dp"
-            android:background="#8C8181">
-
-            <ImageView
-                android:id="@+id/caloryneeds_femaleview"
-                android:layout_width="65dp"
-                android:layout_height="68dp"
-                android:layout_above="@+id/caloryneeds_textView_female"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="11dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/caloryneeds_textView_female"
-                android:layout_width="57dp"
-                android:layout_height="33dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:text="Female"
-                android:textAlignment="center" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/caloryneeds_height_layout"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_above="@+id/caloryneeds_weight_layout"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="47dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="65dp"
             android:background="@drawable/extra_curved30"
-            android:backgroundTint="#5BD6C8">
+            android:backgroundTint="#16BFBF"
+            android:entries="@array/calorie_pasdropdown"
+            android:minHeight="48dp"
+            android:textAlignment="center" />
 
-            <TextView
-                android:id="@+id/caloryneeds_height_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="70dp"
-                android:layout_marginEnd="72dp"
-                android:layout_marginBottom="39dp"
-                android:gravity="center"
-                android:text="90" />
+        <TextView
+            android:id="@+id/caloryneeds_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/caloryneeds_spinner"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="74dp"
+            android:layout_marginBottom="19dp"
+            android:gravity="center"
+            android:text="Select Physical Activity"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <SeekBar
-                android:id="@+id/caloryneeds_height_seekbar"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="6dp"
-                android:layout_marginBottom="18dp"
-                tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="422dp" />
-
-            <TextView
-                android:id="@+id/caloryneeds_height_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="78dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="80dp"
-                android:layout_marginBottom="63dp"
-                android:gravity="center"
-                android:text="Height"
-                android:textStyle="bold" />
-        </RelativeLayout>
     </RelativeLayout>
-
-
-
 
     <RelativeLayout
         android:id="@+id/caloryneeds_secondarylayout"
         android:layout_width="300dp"
         android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="56dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginEnd="52dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/curved_relativelayout"
         android:backgroundTint="#16BFBF"
@@ -312,7 +269,6 @@
             android:layout_marginEnd="54dp"
             android:layout_marginBottom="52dp"
             android:background="@drawable/curved_textview"
-            android:backgroundTint="@color/white"
             android:gravity="center"
             android:text="Calories Needed"
             android:textAlignment="center"
@@ -338,4 +294,4 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
