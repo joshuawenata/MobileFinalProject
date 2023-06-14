@@ -3,6 +3,7 @@ package com.example.moblefinpro;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -24,6 +25,28 @@ public class eatreminder extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if(isChecked) breakfast = 1;
                 else breakfast = 0;
+
+                Log.d("Breakfast check", "onCheckedChanged: " + breakfast);
+            }
+        });
+
+        lunch_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked) lunch = 1;
+                else lunch= 0;
+
+                Log.d("Lunch check", "onCheckedChanged: " + breakfast);
+            }
+        });
+
+        dinner_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked) dinner = 1;
+                else dinner = 0;
+
+                Log.d("Dinner check", "onCheckedChanged: " + breakfast);
             }
         });
 

@@ -9,13 +9,13 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class excersizeAdapter extends RecyclerView.Adapter<excersizeLayout> {
+public class exerciseAdapter extends RecyclerView.Adapter<excersizeLayout> {
 
 
     Context context;
     List<Item> items;
 
-    public excersizeAdapter(Context context, List<Item> items) {
+    public exerciseAdapter(Context context, List<Item> items) {
         this.context = context;
         this.items = items;
     }

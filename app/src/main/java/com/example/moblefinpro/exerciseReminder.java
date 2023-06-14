@@ -12,12 +12,12 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcersizeReminder extends AppCompatActivity {
+public class exerciseReminder extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_excersize_reminder);
+        setContentView(R.layout.activity_exercise_reminder);
         Button btnMove = findViewById(R.id.excersize_reminder_intentbtn);
         RecyclerView recyclerView = findViewById(R.id.excersize_reminder_recyclerView);
 
@@ -25,7 +25,7 @@ public class ExcersizeReminder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-            startActivity(new Intent(ExcersizeReminder.this, AddExcersize.class));
+            startActivity(new Intent(exerciseReminder.this, AddExcersize.class));
             }
         });
 
@@ -42,7 +42,7 @@ public class ExcersizeReminder extends AppCompatActivity {
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new excersizeAdapter(getApplicationContext(),items));
+        recyclerView.setAdapter(new exerciseAdapter(getApplicationContext(),items));
 
     }
 }

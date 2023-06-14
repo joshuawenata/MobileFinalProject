@@ -42,7 +42,7 @@
             android:name=".WaterReminder"
             android:exported="false" />
         <activity
-            android:name=".ExcersizeReminder"
+            android:name=".exerciseReminder"
             android:exported="false" />
         <activity
             android:name=".AddExcersize"

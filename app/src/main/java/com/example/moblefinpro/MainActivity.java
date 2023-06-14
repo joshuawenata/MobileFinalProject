@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoDailyCalory(View view) {
-        startActivity(new Intent(this, caloryneeds.class));
+        startActivity(new Intent(this, malefemalepicker.class));
     }
 
     public void gotoEat(View view) {
@@ -49,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoExercise(View view) {
-        startActivity(new Intent(this, ExcersizeReminder.class));
+        startActivity(new Intent(this, exerciseReminder.class));
     }
 
 }
