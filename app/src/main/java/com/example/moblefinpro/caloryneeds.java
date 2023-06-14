@@ -57,154 +57,154 @@ public class caloryneeds extends AppCompatActivity {
         age_bar.setEnabled(false);
 
         // When male layout is chosen
-        male.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Displays the default bmr value first
-                bmrmale();
-
-                // Enables the sliders
-                height_bar.setEnabled(true);
-                weight_bar.setEnabled(true);
-                age_bar.setEnabled(true);
-
-                // SeekBar modification results in bmr update
-                height_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    int heightValue;
-
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                        heightValue = i + minHeight;
-                        calheight.setText("" + heightValue);
-                        bmrmale();
-                    }
-
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-                    }
-
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-                    }
-
-                });
-
-                weight_bar.setMax(200); // Sets max value for weight
-                weight_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    int weightValue;
-
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                        weightValue = i + minWeight;
-                        calweight.setText("" + weightValue);
-                        bmrmale();
-                    }
-
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-                    }
-
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-                    }
-                });
-
-                age_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    int ageValue;
-
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                        ageValue = i + minAge;
-                        calage.setText("" + ageValue);
-                        bmrmale();
-                    }
-
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-                    }
-
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-                    }
-                });
-
-            }
-        });
-
-        // When female layout is chosen
-        female.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Displays the lowest bmr value first
-                bmrfemale();
-
-                // Enables the sliders
-                height_bar.setEnabled(true);
-                weight_bar.setEnabled(true);
-                age_bar.setEnabled(true);
-
-                // SeekBar modification results in bmr update
-                height_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    int heightValue;
-
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                        heightValue = i + minHeight;
-                        calheight.setText("" + heightValue);
-                        bmrfemale();
-                    }
-
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-                    }
-
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-                    }
-
-                });
-
-                weight_bar.setMax(200); // Sets max value for weight
-                weight_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    int weightValue;
-
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                        weightValue = i + minWeight;
-                        calweight.setText("" + weightValue);
-                        bmrfemale();
-                    }
-
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-                    }
-
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-                    }
-                });
-
-                age_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    int ageValue;
-
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                        ageValue = i + minAge;
-                        calage.setText("" + ageValue);
-                        bmrfemale();
-                    }
-
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-                    }
-
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-                    }
-                });
-
-            }
-        });
+//        male.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Displays the default bmr value first
+//                bmrmale();
+//
+//                // Enables the sliders
+//                height_bar.setEnabled(true);
+//                weight_bar.setEnabled(true);
+//                age_bar.setEnabled(true);
+//
+//                // SeekBar modification results in bmr update
+//                height_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                    int heightValue;
+//
+//                    @Override
+//                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+//                        heightValue = i + minHeight;
+//                        calheight.setText("" + heightValue);
+//                        bmrmale();
+//                    }
+//
+//                    @Override
+//                    public void onStartTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                    @Override
+//                    public void onStopTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                });
+//
+//                weight_bar.setMax(200); // Sets max value for weight
+//                weight_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                    int weightValue;
+//
+//                    @Override
+//                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+//                        weightValue = i + minWeight;
+//                        calweight.setText("" + weightValue);
+//                        bmrmale();
+//                    }
+//
+//                    @Override
+//                    public void onStartTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                    @Override
+//                    public void onStopTrackingTouch(SeekBar seekBar) {
+//                    }
+//                });
+//
+//                age_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                    int ageValue;
+//
+//                    @Override
+//                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+//                        ageValue = i + minAge;
+//                        calage.setText("" + ageValue);
+//                        bmrmale();
+//                    }
+//
+//                    @Override
+//                    public void onStartTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                    @Override
+//                    public void onStopTrackingTouch(SeekBar seekBar) {
+//                    }
+//                });
+//
+//            }
+//        });
+//
+//        // When female layout is chosen
+//        female.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Displays the lowest bmr value first
+//                bmrfemale();
+//
+//                // Enables the sliders
+//                height_bar.setEnabled(true);
+//                weight_bar.setEnabled(true);
+//                age_bar.setEnabled(true);
+//
+//                // SeekBar modification results in bmr update
+//                height_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                    int heightValue;
+//
+//                    @Override
+//                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+//                        heightValue = i + minHeight;
+//                        calheight.setText("" + heightValue);
+//                        bmrfemale();
+//                    }
+//
+//                    @Override
+//                    public void onStartTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                    @Override
+//                    public void onStopTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                });
+//
+//                weight_bar.setMax(200); // Sets max value for weight
+//                weight_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                    int weightValue;
+//
+//                    @Override
+//                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+//                        weightValue = i + minWeight;
+//                        calweight.setText("" + weightValue);
+//                        bmrfemale();
+//                    }
+//
+//                    @Override
+//                    public void onStartTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                    @Override
+//                    public void onStopTrackingTouch(SeekBar seekBar) {
+//                    }
+//                });
+//
+//                age_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                    int ageValue;
+//
+//                    @Override
+//                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+//                        ageValue = i + minAge;
+//                        calage.setText("" + ageValue);
+//                        bmrfemale();
+//                    }
+//
+//                    @Override
+//                    public void onStartTrackingTouch(SeekBar seekBar) {
+//                    }
+//
+//                    @Override
+//                    public void onStopTrackingTouch(SeekBar seekBar) {
+//                    }
+//                });
+//
+//            }
+//        });
     }
 
 

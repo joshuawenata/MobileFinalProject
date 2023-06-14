@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android Drop Down List Example</string>
-
     <string-array name="calorie_pasdropdown">
         <item>Choose a Item</item>
         <item>Sendentary (little / no exercize) </item>
