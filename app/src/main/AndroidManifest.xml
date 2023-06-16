@@ -45,7 +45,7 @@
             android:name=".exerciseReminder"
             android:exported="false" />
         <activity
-            android:name=".AddExcersize"
+            android:name=".AddExercise"
             android:exported="false" />
         <activity
             android:name=".SleepReminder"

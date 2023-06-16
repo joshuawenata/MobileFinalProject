@@ -25,7 +25,7 @@ public class exerciseReminder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-            startActivity(new Intent(exerciseReminder.this, AddExcersize.class));
+            startActivity(new Intent(exerciseReminder.this, AddExercise.class));
             }
         });
 
