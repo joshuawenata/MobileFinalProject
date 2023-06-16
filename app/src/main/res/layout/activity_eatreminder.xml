@@ -32,8 +32,8 @@
         android:layout_height="150dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="469dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="470dp"
         android:background="@drawable/curved_layout"
         android:backgroundTint="#9ED6CA"
         app:layout_constraintBottom_toTopOf="@+id/eatreminder_relativeLayout2"
@@ -64,14 +64,35 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/eatreminder_textView5"
-            android:layout_width="wrap_content"
+            android:id="@+id/breakfast_time"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="175dp"
-            android:layout_marginBottom="16dp"
-            android:text="08:30 AM" />
+            android:layout_marginEnd="186dp"
+            android:layout_marginBottom="17dp"
+            android:text="6:00" />
+
+        <TextClock
+            android:id="@+id/textClock3"
+            android:layout_width="77dp"
+            android:layout_height="32dp" />
+
+        <Button
+            android:id="@+id/breakfastbutton"
+            android:layout_width="87dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/breakfast_switch"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="33dp"
+            android:text="Set Time"
+            android:backgroundTint="#84b3a9"
+            android:textSize="10sp" />
 
     </RelativeLayout>
 
@@ -131,14 +152,31 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/eatreminder_textView9"
-            android:layout_width="wrap_content"
+            android:id="@+id/dinner_time"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="175dp"
-            android:layout_marginBottom="14dp"
-            android:text="18:00 AM" />
+            android:layout_marginEnd="186dp"
+            android:layout_marginBottom="17dp"
+            android:text="18:00" />
+
+        <Button
+            android:id="@+id/dinnerbutton"
+            android:layout_width="87dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/dinner_switch"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="33dp"
+            android:text="Set Time"
+            android:backgroundTint="#248f8d"
+            android:textSize="10sp" />
+
     </RelativeLayout>
 
     <ImageView
@@ -195,14 +233,30 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/eatreminder_textView7"
-            android:layout_width="wrap_content"
+            android:id="@+id/lunch_time"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="175dp"
-            android:layout_marginBottom="14dp"
-            android:text="12:00 AM" />
+            android:layout_marginEnd="186dp"
+            android:layout_marginBottom="17dp"
+            android:text="12:00" />
+
+        <Button
+            android:id="@+id/lunchbutton"
+            android:layout_width="87dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/lunch_switch"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="33dp"
+            android:text="Set Time"
+            android:backgroundTint="#84b3a9"
+            android:textSize="10sp" />
 
     </RelativeLayout>
 

@@ -63,6 +63,7 @@ public class eatreminder extends AppCompatActivity {
         lunch_time.setText(lunchTime[0] + ":" + checkDigit(lunchTime[1]));
         dinner_time.setText(dinnerTime[0] + ":" + checkDigit(dinnerTime[1]));
 
+        // Breakfast time button
         breakfast_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
