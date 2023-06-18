@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#5BD6C8"
-    android:orientation="vertical"
     tools:context=".WaterReminder">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's Hydrate"
+        android:textSize="30sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="40dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/water_reminder_textView"
+        android:layout_below="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_textview"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="WATER REMINDER"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" >
+    </TextView>
+
     <RelativeLayout
+        android:layout_marginTop="-20dp"
         android:id="@+id/water_reminder_relativeLayout"
-        android:layout_width="409dp"
-        android:layout_height="529dp"
-        android:layout_marginTop="204dp"
-        android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_below="@+id/water_reminder_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
         <Button
             android:id="@+id/water_reminder_changeWaterButton"
             android:layout_width="126dp"
             android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="139dp"
-            android:layout_marginEnd="144dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="58dp"
-            android:background="#5BD5C7"
-            android:text="Button"
-            android:textColor="@color/white" />
+            android:backgroundTint="@color/tosca"
+            android:text="Drink"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:letterSpacing="0.5" />
 
         <ImageView
             android:id="@+id/water_reminder_changeWaterImage"
@@ -127,37 +151,8 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Let's Hydrate"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/water_reminder_relativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
-
-    <TextView
-        android:id="@+id/water_reminder_textView"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/curved_textview"
-        android:backgroundTint="@color/white"
-        android:gravity="center"
-        android:text="WATER REMINDER"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

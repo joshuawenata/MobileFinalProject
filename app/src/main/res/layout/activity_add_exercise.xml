@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddExcersize">
+    tools:context=".AddExercise">
+
+    <TextView
+        android:id="@+id/add_excersize_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="640dp"
+        android:text="Set New Excersize!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:id="@+id/add_excersize_relativeLayout"
-        android:layout_width="400dp"
-        android:layout_height="500dp"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="113dp"
+        android:textColor="@color/black"
         android:background="@drawable/curved_relativelayout"
         android:backgroundTint="#CADAD6"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +42,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="116dp"
-            android:layout_marginBottom="439dp"
+            android:layout_marginEnd="99dp"
+            android:layout_marginBottom="440dp"
+            android:textColor="@color/black"
             android:minHeight="48dp"
             android:text="Set Excersize Name" />
 
@@ -34,8 +54,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="141dp"
-            android:layout_marginBottom="213dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginBottom="203dp"
+            android:textColor="@color/black"
             android:text="how many times?" />
 
         <TimePicker
@@ -57,8 +78,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="138dp"
-            android:layout_marginBottom="23dp"
+            android:backgroundTint="#16BFBF"
+            android:layout_marginEnd="122dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="22dp"
             android:text="Button" />
 
         <EditText
@@ -67,24 +90,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="94dp"
+            android:layout_marginEnd="77dp"
             android:layout_marginBottom="123dp"
+            android:textColor="@color/black"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:text="ex: 30 Reps" />
     </RelativeLayout>
-
-    <TextView
-        android:id="@+id/add_excersize_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Set New Excersize!"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/add_excersize_relativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
