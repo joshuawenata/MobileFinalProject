@@ -3,6 +3,7 @@
     <string name="bmi_calculator">BMI Calculator</string>
     <string name="focus_on_your_health">Focus on Your Health!</string>
     <string name="title_activity_registerpage">registerpage</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -15,9 +16,19 @@
     <string name="hiro">HIRO</string>
     <string name="hiro_wake_up_reminder">HIRO - Wake Up Reminder</string>
     <string name="default_web_client_id">hiro-8b590</string>
-    <string name="how_hiro_can_assist_you">How HIRO can assist you?</string>
+    <string name="how_hiro_can_assist_you">How can HIRO assist you?</string>
     <string name="sign_in">SIGN IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="h_i_r_o">H I R O</string>
     <string name="your_health_care_buddy">Your Health Care Buddy</string>
+
+    <string-array name="paldropdown">
+        <item>Choose an Item</item>
+        <item>Sedentary (little / no exercise) </item>
+        <item>Lightly Active (1–2 Days/Week) </item>
+        <item>Moderately Active (3–5 Days/Week) </item>
+        <item>Highly Active (6–7 Days/Week) </item>
+        <item>Extremely Active (Sports / Physical Job) </item>
+    </string-array>
+
 </resources>

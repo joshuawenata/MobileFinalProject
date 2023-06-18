@@ -42,10 +42,10 @@
             android:name=".WaterReminder"
             android:exported="false" />
         <activity
-            android:name=".ExcersizeReminder"
+            android:name=".exerciseReminder"
             android:exported="false" />
         <activity
-            android:name=".AddExcersize"
+            android:name=".AddExercise"
             android:exported="false" />
         <activity
             android:name=".SleepReminder"
@@ -62,6 +62,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <receiver android:name=".notificationReceiver" />
     </application>
 
 </manifest>
