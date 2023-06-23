@@ -214,12 +214,14 @@
             android:layout_width="208dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/caloryneeds_height_layout"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="49dp"
-            android:layout_marginBottom="65dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="62dp"
             android:background="@drawable/extra_curved30"
             android:backgroundTint="#16BFBF"
-            android:entries="@array/calorie_pasdropdown"
+            android:entries="@array/paldropdown"
             android:minHeight="48dp"
             android:textAlignment="center" />
 
