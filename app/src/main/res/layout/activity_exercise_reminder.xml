@@ -30,6 +30,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/excersize_reminder_recyclerView"
+            android:layout_marginVertical="40dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </RelativeLayout>

@@ -13,8 +13,8 @@ public class exerciseLayout extends RecyclerView.ViewHolder {
 
     public exerciseLayout(@NonNull View itemView) {
         super(itemView);
-        nameView = itemView.findViewById(R.id.exercizelayout_restitle);
-        repstitles = itemView.findViewById(R.id.exercizelayout_repstext);
+        nameView = itemView.findViewById(R.id.exercizelayout_title);
+        repstitles = itemView.findViewById(R.id.exercizelayout_reps);
         hourtitle = itemView.findViewById(R.id.exercizelayout_hour);
     }
 }

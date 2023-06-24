@@ -1,19 +1,30 @@
 package com.example.moblefinpro;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.moblefinpro.object.Exercise;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class exerciseReminder extends AppCompatActivity {
-
+    Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,25 +35,35 @@ public class exerciseReminder extends AppCompatActivity {
         btnMove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-            startActivity(new Intent(exerciseReminder.this, AddExercise.class));
+                startActivity(new Intent(exerciseReminder.this, AddExercise.class));
             }
         });
 
-        List<Item> items = new ArrayList<Item>();
-        items.add(new Item("Pushup","30 Reps","10:00"));
-        items.add(new Item("SitUp","30 Reps","15:00"));
-        items.add(new Item("Planks","2 Reps","15:00"));
-        items.add(new Item("Rest","30 Reps","60:00"));
-        items.add(new Item("Jumping Jacks","30 Reps","20:00"));
-        items.add(new Item("Rest","30 Reps","40:00"));
-        items.add(new Item("Combination 3","30 Reps","60:00"));
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid()).child("exercise");
 
 
+        ArrayList<Exercise> newList = new ArrayList<>();
+        myRef.addValueEventListener(new ValueEventListener(){
 
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                    newList.add(postSnapshot.getValue(Exercise.class));
+                }
+                recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
+                exerciseAdapter newAdapter = new exerciseAdapter(context, newList);
+                recyclerView.setAdapter(newAdapter);
+                newAdapter.notifyDataSetChanged();
+            }
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new exerciseAdapter(getApplicationContext(),items));
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 }

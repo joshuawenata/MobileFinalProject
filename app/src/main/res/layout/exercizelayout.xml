@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="350dp"
+    android:layout_width="match_parent"
     android:layout_height="150dp"
+    android:layout_marginHorizontal="40dp"
+    android:layout_marginTop="20dp"
     android:background="@drawable/extra_curved30"
     android:backgroundTint="@color/teal_200"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/exercizelayout_hour"
+        android:id="@+id/exercizelayout_time"
         android:layout_width="137dp"
         android:layout_height="41dp"
         android:layout_alignParentEnd="true"
@@ -32,7 +34,7 @@
         android:minHeight="48dp" />
 
     <TextView
-        android:id="@+id/exercizelayout_restitle"
+        android:id="@+id/exercizelayout_title"
         android:layout_width="120dp"
         android:layout_height="53dp"
         android:gravity="center"
@@ -46,7 +48,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/exercizelayout_repstext"
+        android:id="@+id/exercizelayout_reps"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
