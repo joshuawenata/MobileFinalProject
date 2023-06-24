@@ -85,7 +85,7 @@ public class registerpage extends AppCompatActivity {
                             // You can perform further actions, such as updating user profile or navigating to the next screen
                             if(firebaseUser != null){
                                 String userId = firebaseUser.getUid();
-                                DatabaseReference myRef = database.getReference().child("Users").push();
+                                DatabaseReference myRef = database.getReference().child("Users").child(userId);
                                 myRef.child("userId").setValue(userId);
                                 myRef.child("username").setValue(usernameVal);
                                 myRef.child("email").setValue(firebaseUser.getEmail());
