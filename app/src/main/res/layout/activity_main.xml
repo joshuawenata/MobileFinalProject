@@ -78,14 +78,19 @@
                 </TableRow>
 
                 <!-- Second Row -->
-                <TableRow>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="40dp"
+                    >
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="10dp">
 
                         <ImageView
                             android:id="@+id/main_image1table"
@@ -96,39 +101,44 @@
 
                         <TextView
                             android:id="@+id/main_text1table"
-                            android:layout_width="150dp"
-                            android:layout_height="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:gravity="center"
+                            android:textAlignment="center"
                             android:layout_below="@+id/main_image1table"
                             android:text="@string/bmi_calculator"
                             android:textSize="15sp"
                             android:textStyle="bold" />
+                    </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/main_text2table"
-                            android:layout_width="150dp"
-                            android:layout_height="20dp"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:layout_alignParentRight="true"
-                            android:text="Daily Calorie Needs"
-                            android:layout_below="@id/main_image2table"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="10dp">
 
                         <ImageView
                             android:id="@+id/main_image2table"
-                            android:layout_alignParentRight="true"
                             android:layout_width="150dp"
                             android:layout_height="71dp"
                             android:onClick="gotoDailyCalory"
                             android:src="@drawable/calorielogo" />
 
-                    </RelativeLayout>
+                        <TextView
+                            android:id="@+id/main_text2table"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Daily Calorie Needs"
+                            android:textAlignment="center"
+                            android:layout_below="@id/main_image2table"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
 
-                </TableRow>
+                </LinearLayout>
 
                 <!-- Third Row -->
                 <TableRow android:layout_marginTop="50dp">
@@ -146,20 +156,24 @@
                 </TableRow>
 
                 <!-- Fourth Row -->
-                <TableRow>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="40dp"
+                    >
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp">
-
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="10dp">
 
                         <ImageView
                             android:id="@+id/main_image3table"
                             android:layout_width="150dp"
                             android:layout_height="71dp"
-                            android:layout_marginEnd="111dp"
                             android:onClick="gotoEat"
                             android:src="@drawable/eatlogo" />
 
@@ -173,49 +187,56 @@
                             android:text="Eat Reminder"
                             android:textSize="15sp"
                             android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="10dp">
+
+                        <ImageView
+                            android:id="@+id/main_image4table"
+                            android:layout_width="150dp"
+                            android:layout_height="71dp"
+                            android:onClick="gotoWater"
+                            android:src="@drawable/waterlogo" />
 
                         <TextView
                             android:id="@+id/main_text4table"
-                            android:layout_width="150dp"
+                            android:layout_width="match_parent"
                             android:layout_height="20dp"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:layout_alignParentRight="true"
                             android:text="Water Reminder"
                             android:layout_below="@+id/main_image4table"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:id="@+id/main_image4table"
-                            android:layout_width="150dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_height="71dp"
-                            android:onClick="gotoWater"
-                            android:src="@drawable/waterlogo" />
+                    </LinearLayout>
 
-                    </RelativeLayout>
-
-
-                </TableRow>
+                </LinearLayout>
 
                 <!-- Fifth Row -->
-                <TableRow>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="100dp"
+                    >
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginBottom="50dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        >
-
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="10dp">
 
                         <ImageView
                             android:id="@+id/main_image5table"
                             android:layout_width="150dp"
                             android:layout_height="71dp"
-                            android:layout_marginEnd="111dp"
                             android:onClick="gotoSleep"
                             android:src="@drawable/iconsleep" />
 
@@ -230,6 +251,21 @@
                             android:textSize="15sp"
                             android:textStyle="bold"
                             />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="10dp">
+
+                        <ImageView
+                            android:id="@+id/main_image6table"
+                            android:layout_width="150dp"
+                            android:layout_height="71dp"
+                            android:onClick="gotoExercise"
+                            android:src="@drawable/exlogo"
+                            />
 
                         <TextView
                             android:id="@+id/main_text6table"
@@ -237,23 +273,13 @@
                             android:layout_height="20dp"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:layout_alignParentRight="true"
                             android:text="Excersize Reminder"
                             android:layout_below="@+id/main_image6table"
                             android:textSize="15sp"
                             android:textStyle="bold" />
+                    </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/main_image6table"
-                            android:layout_width="150dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_height="71dp"
-                            android:onClick="gotoExercise"
-                            android:src="@drawable/exlogo"
-                            />
-
-                    </RelativeLayout>
-                </TableRow>
+                </LinearLayout>
             </TableLayout>
         </ScrollView>
 
