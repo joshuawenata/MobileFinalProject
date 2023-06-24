@@ -21,6 +21,9 @@
     <string name="sign_up">SIGN UP</string>
     <string name="h_i_r_o">H I R O</string>
     <string name="your_health_care_buddy">Your Health Care Buddy</string>
+    <string name="set_new_excersize">Set New Excersize!</string>
+    <string name="set_excersize_name">Set Excersize Name</string>
+    <string name="repetition">Repetition</string>
 
     <string-array name="paldropdown">
         <item>Choose an Item</item>

@@ -8,94 +8,82 @@
 
     <TextView
         android:id="@+id/add_excersize_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="640dp"
-        android:text="Set New Excersize!"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="@string/set_new_excersize"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/add_excersize_relativeLayout"
-        android:layout_width="365dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="117dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="113dp"
+        android:layout_below="@+id/add_excersize_title"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
         android:textColor="@color/black"
         android:background="@drawable/curved_relativelayout"
         android:backgroundTint="#CADAD6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/add_excersize_set_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="99dp"
-            android:layout_marginBottom="440dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="50dp"
+            android:textAlignment="center"
             android:textColor="@color/black"
-            android:minHeight="48dp"
-            android:text="Set Excersize Name" />
-
-        <TextView
-            android:id="@+id/add_excersize_ask_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="128dp"
-            android:layout_marginBottom="203dp"
-            android:textColor="@color/black"
-            android:text="how many times?" />
+            android:hint="@string/set_excersize_name" />
 
         <TimePicker
             android:id="@+id/add_excersize_simpleTimePicker"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="101dp"
-            android:layout_marginBottom="259dp"
-            android:paddingTop="1dp"
             android:timePickerMode="spinner" />
 
         <Button
             android:id="@+id/add_excersize_button"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/add_excersize_ask_text"
             android:backgroundTint="#16BFBF"
-            android:layout_marginEnd="122dp"
             android:textColor="@color/black"
-            android:layout_marginBottom="22dp"
             android:text="Button" />
 
-        <EditText
-            android:id="@+id/add_excersize_editTextTextPersonName"
+        <TextView
+            android:id="@+id/add_excersize_ask_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="77dp"
-            android:layout_marginBottom="123dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
             android:textColor="@color/black"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="ex: 30 Reps" />
-    </RelativeLayout>
+            android:text="how many times?" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/add_excersize_button">
+
+            <EditText
+                android:id="@+id/add_excersize_editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:hint="ex: 30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repetition"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
