@@ -45,14 +45,6 @@
             android:layout_height="140dp"
             android:timePickerMode="spinner" />
 
-        <Button
-            android:id="@+id/add_excersize_button"
-            android:layout_width="121dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/add_excersize_ask_text"
-            android:backgroundTint="#16BFBF"
-            android:textColor="@color/black"
-            android:text="Button" />
 
         <TextView
             android:id="@+id/add_excersize_ask_text"
@@ -70,7 +62,7 @@
             android:layout_below="@+id/add_excersize_button">
 
             <EditText
-                android:id="@+id/add_excersize_editTextTextPersonName"
+                android:id="@+id/add_excersize_repetition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -83,6 +75,17 @@
                 android:text="@string/repetition"
                 android:textColor="@color/black"/>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/add_excersize_button"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_excersize_ask_text"
+            android:backgroundTint="#16BFBF"
+            android:textColor="@color/black"
+            android:text="Submit"
+            android:onClick="addExcercise"
+            />
 
     </LinearLayout>
 

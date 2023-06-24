@@ -109,7 +109,7 @@ public class landing_page extends AppCompatActivity {
                             FirebaseUser firebaseUser = mAuth.getCurrentUser();
                             if(firebaseUser != null){
                                 String userId = firebaseUser.getUid();
-                                DatabaseReference myRef = database.getReference().child("Users").push();
+                                DatabaseReference myRef = database.getReference().child("Users").child(userId);
                                 myRef.child("userId").setValue(userId);
                                 myRef.child("username").setValue(firebaseUser.getDisplayName());
                                 myRef.child("email").setValue(firebaseUser.getEmail());
