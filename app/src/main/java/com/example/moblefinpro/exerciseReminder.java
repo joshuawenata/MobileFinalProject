@@ -44,7 +44,6 @@ public class exerciseReminder extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid()).child("exercise");
 
-
         ArrayList<Exercise> newList = new ArrayList<>();
         myRef.addValueEventListener(new ValueEventListener(){
 

@@ -1,5 +1,6 @@
 package com.example.moblefinpro;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -23,6 +24,14 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
@@ -58,10 +67,69 @@ public class eatreminder extends AppCompatActivity {
         Button lunchButton = findViewById(R.id.lunchbutton);
         Button dinnerButton = findViewById(R.id.dinnerbutton);
 
-        // Template according to user's time picked (taken from database later)
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid());
+
         breakfast_time.setText(breakfastTime[0] + ":" + checkDigit(breakfastTime[1]));
         lunch_time.setText(lunchTime[0] + ":" + checkDigit(lunchTime[1]));
         dinner_time.setText(dinnerTime[0] + ":" + checkDigit(dinnerTime[1]));
+
+        if(myRef.child("breakfast")!=null){
+            myRef.child("breakfast").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.getValue()==null) {
+                        myRef.child("breakfast").setValue(breakfast_time.getText().toString());
+                    }else{
+                        breakfast_time.setText(snapshot.getValue().toString());
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
+
+        if(myRef.child("lunch")!=null){
+            myRef.child("lunch").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.getValue()==null){
+                        myRef.child("lunch").setValue(lunch_time.getText().toString());
+                    }else{
+                        lunch_time.setText(snapshot.getValue().toString());
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
+
+
+        if(myRef.child("dinner")!=null){
+            myRef.child("dinner").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.getValue()==null){
+                        myRef.child("dinner").setValue(dinner_time.getText().toString());
+                    }else{
+                        dinner_time.setText(snapshot.getValue().toString());
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
 
         // Breakfast time button
         breakfast_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -71,7 +139,6 @@ public class eatreminder extends AppCompatActivity {
                 else breakfast = 0;
 
                 setNotification(breakfast_id, "breakfast", breakfast, breakfastTime);
-
                 Log.d("Breakfast check", "onCheckedChanged: " + breakfast);
             }
         });
@@ -79,10 +146,11 @@ public class eatreminder extends AppCompatActivity {
         breakfastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTime(breakfastTime, breakfast_time);
+                setTime(breakfastTime, breakfast_time, "breakfast");
                 breakfast_switch.setChecked(false);
                 breakfast = 0;
             }
+
         });
 
         lunch_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -100,7 +168,7 @@ public class eatreminder extends AppCompatActivity {
         lunchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTime(lunchTime, lunch_time);
+                setTime(lunchTime, lunch_time, "lunch");
                 lunch_switch.setChecked(false);
                 lunch = 0;
             }
@@ -121,7 +189,7 @@ public class eatreminder extends AppCompatActivity {
         dinnerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               setTime(dinnerTime, dinner_time);
+               setTime(dinnerTime, dinner_time, "dinner");
                dinner_switch.setChecked(false);
                dinner = 0;
             }
@@ -130,7 +198,7 @@ public class eatreminder extends AppCompatActivity {
     }
 
     // Display time picker and set it to TextView
-    public void setTime(int time[], TextView timeSet) {
+    public void setTime(int time[], TextView timeSet, String path) {
         final Calendar c = Calendar.getInstance();
 
         // Getting hour and minute.
@@ -147,6 +215,11 @@ public class eatreminder extends AppCompatActivity {
                         // on below line we are setting selected time
                         // in our text view.
                         timeSet.setText(hourOfDay + ":" + checkDigit(minute));
+                        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid());
+                        myRef.child(path).setValue(timeSet.getText().toString());
                         time[0] = hourOfDay;
                         time[1] = minute;
 
