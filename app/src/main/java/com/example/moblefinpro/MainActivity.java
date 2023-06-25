@@ -75,4 +75,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, exerciseReminder.class));
     }
 
+    public void Logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(MainActivity.this, landing_page.class));
+        finishAffinity();
+    }
 }
