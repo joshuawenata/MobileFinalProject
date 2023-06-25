@@ -83,14 +83,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:orientation="horizontal"
-                    android:layout_marginHorizontal="40dp"
                     >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="10dp">
+                        android:layout_marginHorizontal="30dp">
 
                         <ImageView
                             android:id="@+id/main_image1table"
@@ -115,7 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="10dp">
+                        android:layout_marginHorizontal="30dp">
 
                         <ImageView
                             android:id="@+id/main_image2table"
@@ -161,14 +160,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:orientation="horizontal"
-                    android:layout_marginHorizontal="40dp"
                     >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="10dp">
+                        android:layout_marginHorizontal="30dp">
 
                         <ImageView
                             android:id="@+id/main_image3table"
@@ -193,7 +191,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="10dp">
+                        android:layout_marginHorizontal="30dp">
 
                         <ImageView
                             android:id="@+id/main_image4table"
@@ -223,7 +221,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:orientation="horizontal"
-                    android:layout_marginHorizontal="40dp"
                     android:layout_marginBottom="100dp"
                     >
 
@@ -231,7 +228,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="10dp">
+                        android:layout_marginHorizontal="30dp">
 
                         <ImageView
                             android:id="@+id/main_image5table"
@@ -257,7 +254,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="10dp">
+                        android:layout_marginHorizontal="30dp">
 
                         <ImageView
                             android:id="@+id/main_image6table"
