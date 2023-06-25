@@ -8,25 +8,45 @@
     tools:context=".MainActivity">
 
     <!-- harus di resize kyknya, -->
-    <TextView
-        android:id="@+id/main_title"
-        android:layout_width="201dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Your Daily Application"
-        android:textColor="@color/white"
-        android:textSize="36dp"
-        android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/main"
+        >
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="201dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Your Daily Application"
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/logout"
+            android:background="@null"
+            android:onClick="Logout"
+            />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/main_menu_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/main_title"
+        android:layout_below="@+id/main"
         android:background="@drawable/extra_curved30"
         android:backgroundTint="#C9F3F4"
         android:gravity="center"
