@@ -18,13 +18,13 @@
 
         <TextView
             android:id="@+id/main_title"
-            android:layout_width="201dp"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
-            android:text="Your Daily Application"
+            android:text="Hello, world!"
             android:textColor="@color/white"
             android:textSize="36dp"
             android:textStyle="bold" />
@@ -34,7 +34,6 @@
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
             android:src="@drawable/logout"
             android:background="@null"
             android:onClick="Logout"
@@ -42,7 +41,7 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/main_menu_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +49,8 @@
         android:background="@drawable/extra_curved30"
         android:backgroundTint="@color/white"
         android:gravity="center"
-        android:textAlignment="center">
+        android:textAlignment="center"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/main_menu_text"
@@ -104,13 +104,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:orientation="horizontal"
+                    android:gravity="center"
                     >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="30dp">
+                        android:layout_marginHorizontal="15dp"
+                        >
 
                         <ImageView
                             android:id="@+id/main_image1table"
@@ -136,7 +138,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="30dp">
+                        android:layout_marginHorizontal="15dp"
+                        >
 
                         <ImageView
                             android:id="@+id/main_image2table"
@@ -183,13 +186,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:orientation="horizontal"
+                    android:gravity="center"
                     >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="30dp">
+                        android:layout_marginHorizontal="15dp"
+                        >
 
                         <ImageView
                             android:id="@+id/main_image3table"
@@ -215,7 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="30dp">
+                        android:layout_marginHorizontal="15dp">
 
                         <ImageView
                             android:id="@+id/main_image4table"
@@ -247,13 +252,14 @@
                     android:layout_marginTop="50dp"
                     android:orientation="horizontal"
                     android:layout_marginBottom="100dp"
+                    android:gravity="center"
                     >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="30dp">
+                        android:layout_marginHorizontal="15dp">
 
                         <ImageView
                             android:id="@+id/main_image5table"
@@ -280,7 +286,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginHorizontal="30dp">
+                        android:layout_marginHorizontal="15dp">
 
                         <ImageView
                             android:id="@+id/main_image6table"
@@ -306,6 +312,6 @@
             </TableLayout>
         </ScrollView>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

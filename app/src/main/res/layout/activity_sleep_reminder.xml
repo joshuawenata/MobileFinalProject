@@ -4,41 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SleepReminder">
+    tools:context=".SleepReminder"
+    android:background="@color/white">
 
     <RelativeLayout
         android:id="@+id/sleep_reminder_mainlayout"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_height="650dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="161dp"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginBottom="-30dp"
+        android:layout_marginTop="115dp"
         android:background="@drawable/curved_relativelayout"
         android:backgroundTint="#2E323A"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <!--        app:layout_constraintTop_toBottomOf="@+id/bmi_maintext">-->
+        android:gravity="center">
 
         <RelativeLayout
             android:id="@+id/sleep_reminder_bedtimelayout"
             android:layout_width="200dp"
-            android:layout_height="151dp"
+            android:layout_height="150dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="57dp"
-            android:layout_marginTop="67dp"
             android:layout_marginEnd="62dp"
-            android:layout_marginBottom="382dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/curved_layout"
             android:backgroundTint="@color/darker_green"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +45,9 @@
                 android:minHeight="48dp"
                 android:text="done"
                 android:textColor="@color/white"
-                android:textSize="19dp" />
+                android:textSize="19dp"
+                android:onClick="addBedtime"
+                />
 
             <TimePicker
                 android:id="@+id/sleep_reminder_bedtime"
@@ -78,9 +68,8 @@
                 android:id="@+id/sleep_reminder_textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="189dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginBottom="118dp"
                 android:text="Bedtime"
                 android:textColor="@color/white"
@@ -91,15 +80,13 @@
         <RelativeLayout
             android:id="@+id/sleep_reminder_wakeuplayout"
             android:layout_width="200dp"
-            android:layout_height="151dp"
+            android:layout_height="150dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="59dp"
-            android:layout_marginTop="323dp"
+            android:layout_marginTop="280dp"
             android:layout_marginEnd="62dp"
-            android:layout_marginBottom="126dp"
             android:background="@drawable/curved_layout"
             android:backgroundTint="@color/sleep_tosca"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +105,8 @@
                 android:minHeight="48dp"
                 android:text="done"
                 android:textColor="@color/black"
-                android:textSize="19dp" />
+                android:textSize="19sp"
+                android:onClick="addWakeUp"/>
 
             <TimePicker
                 android:id="@+id/sleep_reminder_wakeup"
@@ -139,9 +127,8 @@
                 android:id="@+id/sleep_reminder_textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="189dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginBottom="118dp"
                 android:text="Wake up"
                 android:textColor="@color/white"
@@ -156,11 +143,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="57dp"
-            android:layout_marginTop="238dp"
+            android:layout_marginTop="200dp"
             android:layout_marginEnd="63dp"
-            android:layout_marginBottom="317dp"
             android:background="@drawable/curved_layout"
             android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -180,7 +165,7 @@
                 android:text=" " />
 
             <TextView
-                android:id="@+id/sleep_reminder_switchview3"
+                android:id="@+id/sleep_reminder_bedtime_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -200,11 +185,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="58dp"
-            android:layout_marginTop="484dp"
+            android:layout_marginTop="447dp"
             android:layout_marginEnd="62dp"
-            android:layout_marginBottom="71dp"
             android:background="@drawable/curved_layout"
             android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -224,7 +207,7 @@
                 android:text=" " />
 
             <TextView
-                android:id="@+id/sleep_reminder_switchview4"
+                android:id="@+id/sleep_reminder_wakeup_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -239,44 +222,26 @@
 
         <TextView
             android:id="@+id/sleep_reminder_textView1"
-            android:layout_width="159dp"
-            android:layout_height="35dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="126dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="129dp"
-            android:layout_marginBottom="552dp"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:text="Sleep Reminder"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
     <ImageView
         android:id="@+id/sleep_reminder_imageview"
-        android:layout_width="97dp"
-        android:layout_height="84dp"
-        android:layout_alignParentStart="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="605dp"
-        app:layout_constraintBottom_toTopOf="@+id/sleep_reminder_mainlayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307"
-        app:srcCompat="@drawable/sleepimg" />
+        app:srcCompat="@drawable/sleepimg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        />
 
 </RelativeLayout>
