@@ -76,60 +76,53 @@ public class eatreminder extends AppCompatActivity {
         lunch_time.setText(lunchTime[0] + ":" + checkDigit(lunchTime[1]));
         dinner_time.setText(dinnerTime[0] + ":" + checkDigit(dinnerTime[1]));
 
-        if(myRef.child("breakfast")!=null){
-            myRef.child("breakfast").addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if(snapshot.getValue()==null) {
-                        myRef.child("breakfast").setValue(breakfast_time.getText().toString());
-                    }else{
-                        breakfast_time.setText(snapshot.getValue().toString());
-                    }
+        myRef.child("breakfast").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.getValue()==null) {
+                    myRef.child("breakfast").setValue(breakfast_time.getText().toString());
+                }else{
+                    breakfast_time.setText(snapshot.getValue().toString());
                 }
+            }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        myRef.child("lunch").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.getValue()==null){
+                    myRef.child("lunch").setValue(lunch_time.getText().toString());
+                }else{
+                    lunch_time.setText(snapshot.getValue().toString());
                 }
-            });
-        }
+            }
 
-        if(myRef.child("lunch")!=null){
-            myRef.child("lunch").addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if(snapshot.getValue()==null){
-                        myRef.child("lunch").setValue(lunch_time.getText().toString());
-                    }else{
-                        lunch_time.setText(snapshot.getValue().toString());
-                    }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        myRef.child("dinner").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.getValue()==null){
+                    myRef.child("dinner").setValue(dinner_time.getText().toString());
+                }else{
+                    dinner_time.setText(snapshot.getValue().toString());
                 }
+            }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-                }
-            });
-        }
-
-
-        if(myRef.child("dinner")!=null){
-            myRef.child("dinner").addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if(snapshot.getValue()==null){
-                        myRef.child("dinner").setValue(dinner_time.getText().toString());
-                    }else{
-                        dinner_time.setText(snapshot.getValue().toString());
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-        }
+            }
+        });
 
         // Breakfast time button
         breakfast_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

@@ -9,25 +9,35 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.moblefinpro.receiver.BedTimeNotificationReceiver;
 import com.example.moblefinpro.receiver.WakeUpNotificationReceiver;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 
 public class SleepReminder extends AppCompatActivity {
+    TimePicker bedtime, wakeup;
+    TextView bedtimetext, wakeuptext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sleep_reminder);
 
-        Button bedtimePickTimeBtn = findViewById(R.id.sleep_reminder_bedtimebutton);
-        Button wakeUpPickTimeBtn = findViewById(R.id.sleep_reminder_wakeupbutton);
-        TextView bedTimeSelectedTimeTV = findViewById(R.id.sleep_reminder_switchbedtime);
-        TextView wakeUpSelectedTimeTV = findViewById(R.id.sleep_reminder_switchwakeup);
-        TimePicker bedtime = findViewById(R.id.sleep_reminder_bedtime);
-        TimePicker wakeup = findViewById(R.id.sleep_reminder_wakeup);
+        bedtime = findViewById(R.id.sleep_reminder_bedtime);
+        wakeup = findViewById(R.id.sleep_reminder_wakeup);
         Context context = this;
 
         Intent w = new Intent(context, WakeUpNotificationReceiver.class);
@@ -44,34 +54,69 @@ public class SleepReminder extends AppCompatActivity {
         long triggerTimeMillisBedtime = System.currentTimeMillis() + (bedtime.getHour()* 3600000L +bedtime.getMinute()* 60000L);
         alarmManagerBedtime.set(AlarmManager.RTC_WAKEUP, triggerTimeMillisBedtime, pendingIntentBedtime);
 
-        // on below line we are adding click
-        // listener for our pick date button
-        bedtimePickTimeBtn.setOnClickListener(new View.OnClickListener() {
+        bedtimetext = findViewById(R.id.sleep_reminder_bedtime_text);
+        wakeuptext = findViewById(R.id.sleep_reminder_wakeup_text);
+
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid());
+
+        myRef.child("bedtime").addValueEventListener(new ValueEventListener(){
+
             @Override
-            public void onClick(View v) {
-                // on below line we are getting the
-                // instance of our calendar.
-                final Calendar c = Calendar.getInstance();
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.getValue()==null){
+                    bedtimetext.setText("12:30");
+                }else{
+                    bedtimetext.setText(snapshot.getValue().toString());
+                }
+            }
 
-                // on below line we are getting our hour, minute.
-                int hour = c.get(Calendar.HOUR_OF_DAY);
-                int minute = c.get(Calendar.MINUTE);
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-                // on below line we are initializing our Time Picker Dialog
-                TimePickerDialog timePickerDialog = new TimePickerDialog(SleepReminder.this,
-                        new TimePickerDialog.OnTimeSetListener() {
-                            @Override
-                            public void onTimeSet(TimePicker view, int hourOfDay,
-                                                  int minute) {
-                                // on below line we are setting selected time
-                                // in our text view.
-                                bedTimeSelectedTimeTV.setText(hourOfDay + ":" + minute);
-                            }
-                        }, hour, minute, false);
-                // at last we are calling show to
-                // display our time picker dialog.
-                timePickerDialog.show();
             }
         });
+
+        myRef.child("wakeup").addValueEventListener(new ValueEventListener(){
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.getValue()==null){
+                    wakeuptext.setText("12:30");
+                }else{
+                    wakeuptext.setText(snapshot.getValue().toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
+    public void addBedtime(View view) {
+        bedtimetext = findViewById(R.id.sleep_reminder_bedtime_text);
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid());
+
+        myRef.child("bedtime").setValue(bedtime.getHour()+":"+bedtime.getMinute());
+        bedtimetext.setText(bedtime.getHour()+":"+bedtime.getMinute());
+    }
+
+    public void addWakeUp(View view) {
+        wakeuptext = findViewById(R.id.sleep_reminder_wakeup_text);
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid());
+
+        myRef.child("wakeup").setValue(wakeup.getHour()+":"+wakeup.getMinute());
+        wakeuptext.setText(wakeup.getHour()+":"+wakeup.getMinute());
     }
 }

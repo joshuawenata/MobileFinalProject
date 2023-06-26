@@ -57,7 +57,9 @@
                 android:minHeight="48dp"
                 android:text="done"
                 android:textColor="@color/white"
-                android:textSize="19dp" />
+                android:textSize="19dp"
+                android:onClick="addBedtime"
+                />
 
             <TimePicker
                 android:id="@+id/sleep_reminder_bedtime"
@@ -116,7 +118,8 @@
                 android:minHeight="48dp"
                 android:text="done"
                 android:textColor="@color/white"
-                android:textSize="19sp" />
+                android:textSize="19sp"
+                android:onClick="addWakeUp"/>
 
             <TimePicker
                 android:id="@+id/sleep_reminder_wakeup"
@@ -176,7 +179,7 @@
                 android:text=" " />
 
             <TextView
-                android:id="@+id/sleep_reminder_switchview3"
+                android:id="@+id/sleep_reminder_bedtime_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -220,7 +223,7 @@
                 android:text=" " />
 
             <TextView
-                android:id="@+id/sleep_reminder_switchview4"
+                android:id="@+id/sleep_reminder_wakeup_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
