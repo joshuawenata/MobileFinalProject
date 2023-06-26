@@ -15,4 +15,7 @@
     <color name="purple_middle">#7795FF</color>
     <color name="purple_dark">#FF3700B3</color>
     <color name="grey">#5b5b5b</color>
+    <color name="darker_green">#005958</color>
+    <color name="exc_teal">#9BDBDA</color>
+    <color name="sleep_tosca">#6FB4B2</color>
 </resources>

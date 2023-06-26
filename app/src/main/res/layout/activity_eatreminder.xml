@@ -4,24 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DAF6F3"
+    android:background="#EFFFFB"
     tools:context=".eatreminder">
 
     <TextView
         android:id="@+id/eatreminder_view"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginBottom="675dp"
+        android:layout_marginEnd="238dp"
+        android:layout_marginBottom="674dp"
         android:background="@drawable/curved_layout"
-        android:backgroundTint="@color/grey"
+        android:backgroundTint="@color/white"
         android:text="Eat Reminder"
         android:textAlignment="center"
+        android:textColor="@color/blue_dark"
         android:textSize="20dp"
-        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.306"
@@ -61,7 +63,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="150dp"
             android:layout_marginBottom="35dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="Breakfast"
             android:textSize="20sp" />
 
@@ -73,7 +75,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="186dp"
             android:layout_marginBottom="17dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="6:00" />
 
         <TextClock
@@ -95,7 +97,7 @@
             android:layout_marginBottom="33dp"
             android:text="Set Time"
             android:backgroundTint="#84b3a9"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="10sp" />
 
     </RelativeLayout>
@@ -150,7 +152,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="176dp"
             android:layout_marginBottom="39dp"
@@ -165,7 +167,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="186dp"
             android:layout_marginBottom="17dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="18:00" />
 
         <Button
@@ -182,7 +184,7 @@
             android:layout_marginBottom="33dp"
             android:text="Set Time"
             android:backgroundTint="#248f8d"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="10sp" />
 
     </RelativeLayout>
@@ -237,7 +239,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="176dp"
             android:layout_marginBottom="39dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="Lunch"
             android:textSize="20sp" />
 
@@ -249,7 +251,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="186dp"
             android:layout_marginBottom="17dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="12:00" />
 
         <Button
@@ -264,7 +266,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="13dp"
             android:layout_marginBottom="33dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="Set Time"
             android:backgroundTint="#84b3a9"
             android:textSize="10sp" />

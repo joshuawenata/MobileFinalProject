@@ -16,10 +16,10 @@
         android:layout_marginEnd="52dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/curved_textview"
-        android:backgroundTint="#48B5A8"
+        android:backgroundTint="#37B7B5"
         android:gravity="center"
         android:text="Daily Calories Need"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -167,7 +167,7 @@
             android:layout_marginEnd="162dp"
             android:layout_marginBottom="27dp"
             android:background="@drawable/extra_curved30"
-            android:backgroundTint="#A2F1E8">
+            android:backgroundTint="#C6F5F4">
 
             <TextView
                 android:id="@+id/caloryneeds_weight_number"
@@ -278,6 +278,7 @@
             android:layout_marginEnd="54dp"
             android:layout_marginBottom="52dp"
             android:background="@drawable/curved_textview"
+            android:backgroundTint="@color/white"
             android:gravity="center"
             android:text="Calories Needed"
             android:textAlignment="center"
