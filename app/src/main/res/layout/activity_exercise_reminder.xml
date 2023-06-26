@@ -14,6 +14,7 @@
         android:text="Excersize Reminder"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +33,7 @@
             android:id="@+id/excersize_reminder_recyclerView"
             android:layout_marginVertical="40dp"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="match_parent" />
     </RelativeLayout>
 
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Add Excersize"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toEndOf="@+id/excersize_reminder_title"

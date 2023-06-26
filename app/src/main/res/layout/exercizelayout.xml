@@ -6,7 +6,7 @@
     android:layout_marginTop="20dp"
     android:background="@drawable/extra_curved30"
     android:backgroundTint="@color/teal_200"
-    android:padding="16dp">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/exercizelayout_time"
@@ -18,6 +18,7 @@
         android:layout_marginBottom="87dp"
         android:gravity="center"
         android:text="00:00 am"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="20sp" />
 
@@ -28,6 +29,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="37dp"
+        android:textColor="@color/black"
         android:layout_marginBottom="17dp"
         android:gravity="center"
         android:minWidth="48dp"
@@ -41,8 +43,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="78dp"
-        android:layout_toStartOf="@+id/exercizelayout_hour"
+        android:layout_toStartOf="@+id/exercizelayout_time"
         android:text="Pushup"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -55,6 +58,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="108dp"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
         android:layout_toStartOf="@+id/exercizelayout_switch"
         android:text="30 Times"
         android:textAlignment="center"

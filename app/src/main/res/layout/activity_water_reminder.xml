@@ -12,61 +12,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Let's Hydrate"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:layout_marginTop="80dp"
         android:layout_marginStart="40dp"
         android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/water_reminder_textView"
-        android:layout_below="@+id/textView3"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/curved_textview"
-        android:backgroundTint="@color/white"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:text="WATER REMINDER"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" >
-    </TextView>
-
     <RelativeLayout
-        android:layout_marginTop="-20dp"
         android:id="@+id/water_reminder_relativeLayout"
-        android:layout_below="@+id/water_reminder_textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:layout_height="505dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/curved_textview"
+        android:backgroundTint="#FFFFFF">
 
         <Button
             android:id="@+id/water_reminder_changeWaterButton"
             android:layout_width="126dp"
             android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="58dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="32dp"
             android:backgroundTint="@color/tosca"
+            android:letterSpacing="0.5"
             android:text="Drink"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:letterSpacing="0.5" />
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/water_reminder_changeWaterImage"
             android:layout_width="300dp"
             android:layout_height="400dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="49dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="122dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginBottom="93dp"
 
             app:srcCompat="@drawable/glass1" />
 
@@ -82,6 +67,7 @@
             android:gravity="center"
             android:text="2L"
             android:textSize="30sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <View
@@ -131,6 +117,7 @@
             android:layout_marginTop="123dp"
             android:layout_marginEnd="38dp"
             android:gravity="center"
+            android:textColor="@color/black"
             android:text="3L"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -146,13 +133,27 @@
             android:gravity="center"
             android:text="1L"
             android:textSize="30sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
 
     </RelativeLayout>
 
-
-
+    <TextView
+        android:id="@+id/water_reminder_textView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/curved_textview"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="WATER REMINDER"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"></TextView>
 
 
 </RelativeLayout>

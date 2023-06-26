@@ -18,7 +18,7 @@
         android:gravity="center"
         android:text="Sign In Page"
         android:textSize="40dp"
-        android:textColor="@color/blue_dark"
+        android:textColor="@color/black"
         android:fontFamily="sans-serif-smallcaps"
         android:textStyle="bold"/>
 
@@ -63,6 +63,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:textColor="@color/black"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:src="@drawable/sign_in_btn"
