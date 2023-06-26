@@ -65,6 +65,7 @@
                 android:layout_alignParentBottom="true"
                 android:gravity="center"
                 android:text="Female"
+                android:textColor="@color/black"
                 android:textAlignment="center" />
         </RelativeLayout>
 
@@ -98,6 +99,7 @@
                 android:layout_alignParentBottom="true"
                 android:gravity="center"
                 android:text="Male"
+                android:textColor="@color/black"
                 android:textAlignment="center" />
         </RelativeLayout>
 
@@ -125,6 +127,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="158dp"
         android:layout_marginBottom="42dp"
+        android:textColor="@color/white"
         android:text="Confirm" />
 
 </RelativeLayout>

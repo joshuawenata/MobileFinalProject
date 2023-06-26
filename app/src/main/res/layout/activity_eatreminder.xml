@@ -17,10 +17,11 @@
         android:layout_marginEnd="131dp"
         android:layout_marginBottom="675dp"
         android:background="@drawable/curved_layout"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/grey"
         android:text="Eat Reminder"
         android:textAlignment="center"
         android:textSize="20dp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.306"
@@ -60,6 +61,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="150dp"
             android:layout_marginBottom="35dp"
+            android:textColor="@color/black"
             android:text="Breakfast"
             android:textSize="20sp" />
 
@@ -71,6 +73,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="186dp"
             android:layout_marginBottom="17dp"
+            android:textColor="@color/black"
             android:text="6:00" />
 
         <TextClock
@@ -92,6 +95,7 @@
             android:layout_marginBottom="33dp"
             android:text="Set Time"
             android:backgroundTint="#84b3a9"
+            android:textColor="@color/black"
             android:textSize="10sp" />
 
     </RelativeLayout>
@@ -103,6 +107,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="278dp"
+
         android:layout_marginBottom="547dp"
         android:src="@drawable/breakfast"
         app:layout_constraintBottom_toTopOf="@+id/eatreminder_imgLunch"
@@ -145,6 +150,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="176dp"
             android:layout_marginBottom="39dp"
@@ -159,6 +165,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="186dp"
             android:layout_marginBottom="17dp"
+            android:textColor="@color/black"
             android:text="18:00" />
 
         <Button
@@ -175,6 +182,7 @@
             android:layout_marginBottom="33dp"
             android:text="Set Time"
             android:backgroundTint="#248f8d"
+            android:textColor="@color/black"
             android:textSize="10sp" />
 
     </RelativeLayout>
@@ -229,6 +237,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="176dp"
             android:layout_marginBottom="39dp"
+            android:textColor="@color/black"
             android:text="Lunch"
             android:textSize="20sp" />
 
@@ -240,6 +249,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="186dp"
             android:layout_marginBottom="17dp"
+            android:textColor="@color/black"
             android:text="12:00" />
 
         <Button
@@ -254,6 +264,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="13dp"
             android:layout_marginBottom="33dp"
+            android:textColor="@color/black"
             android:text="Set Time"
             android:backgroundTint="#84b3a9"
             android:textSize="10sp" />

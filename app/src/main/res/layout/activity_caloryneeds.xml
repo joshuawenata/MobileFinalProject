@@ -66,6 +66,7 @@
                 android:layout_marginEnd="72dp"
                 android:layout_marginBottom="39dp"
                 android:gravity="center"
+                android:textColor="@color/black"
                 android:text="90" />
 
             <SeekBar
@@ -92,6 +93,7 @@
                 android:layout_marginEnd="76dp"
                 android:layout_marginBottom="65dp"
                 android:gravity="center"
+                android:textColor="@color/black"
                 android:text="Height"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -120,6 +122,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
+                android:textColor="@color/black"
                 android:text="1" />
 
             <SeekBar
@@ -149,6 +152,7 @@
                 android:layout_marginBottom="66dp"
                 android:gravity="center"
                 android:text="Age"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -176,6 +180,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
+                android:textColor="@color/black"
                 android:text="1" />
 
             <SeekBar
@@ -204,6 +209,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="66dp"
                 android:gravity="center"
+                android:textColor="@color/black"
                 android:text="Weight"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -221,6 +227,7 @@
             android:layout_marginBottom="62dp"
             android:background="@drawable/extra_curved30"
             android:backgroundTint="#16BFBF"
+            android:textColor="@color/black"
             android:entries="@array/paldropdown"
             android:minHeight="48dp"
             android:textAlignment="center" />
@@ -293,6 +300,7 @@
             android:gravity="center"
             android:text="0"
             android:textSize="25dp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
     </RelativeLayout>
 
