@@ -14,12 +14,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginEnd="-3dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="-30dp"
         android:background="@drawable/curved_relativelayout"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#2E323A"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,7 +40,7 @@
             android:layout_marginEnd="62dp"
             android:layout_marginBottom="382dp"
             android:background="@drawable/curved_layout"
-            android:backgroundTint="#CADAD6"
+            android:backgroundTint="@color/darker_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent">
@@ -51,8 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="11dp"
-                android:layout_marginBottom="103dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="101dp"
                 android:backgroundTint="@color/black"
                 android:minHeight="48dp"
                 android:text="done"
@@ -61,13 +61,15 @@
 
             <TimePicker
                 android:id="@+id/sleep_reminder_bedtime"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_width="216dp"
+                android:layout_height="103dp"
                 android:layout_alignParentStart="false"
                 android:layout_alignParentTop="false"
                 android:layout_alignParentEnd="false"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/curved_relativelayout"
+                android:backgroundTint="@color/white"
                 android:paddingTop="1dp"
                 android:textColor="@color/black"
                 android:timePickerMode="spinner" />
@@ -81,7 +83,7 @@
                 android:layout_marginEnd="189dp"
                 android:layout_marginBottom="118dp"
                 android:text="Bedtime"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -99,7 +101,7 @@
             android:layout_marginEnd="62dp"
             android:layout_marginBottom="126dp"
             android:background="@drawable/curved_layout"
-            android:backgroundTint="#CADAD6"
+            android:backgroundTint="@color/sleep_tosca"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent">
@@ -112,23 +114,25 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="11dp"
                 android:layout_marginBottom="103dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/white"
                 android:minHeight="48dp"
                 android:text="done"
-                android:textColor="@color/white"
-                android:textSize="19sp" />
+                android:textColor="@color/black"
+                android:textSize="19dp" />
 
             <TimePicker
                 android:id="@+id/sleep_reminder_wakeup"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_width="216dp"
+                android:layout_height="103dp"
                 android:layout_alignParentStart="false"
                 android:layout_alignParentTop="false"
                 android:layout_alignParentEnd="false"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="1dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/curved_relativelayout"
+                android:backgroundTint="@color/white"
                 android:paddingTop="1dp"
-                android:textColor="@color/black"
+                android:textColor="@color/sleep_tosca"
                 android:timePickerMode="spinner" />
 
             <TextView
@@ -140,7 +144,7 @@
                 android:layout_marginEnd="189dp"
                 android:layout_marginBottom="118dp"
                 android:text="Wake up"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -158,7 +162,7 @@
             android:layout_marginEnd="63dp"
             android:layout_marginBottom="317dp"
             android:background="@drawable/curved_layout"
-            android:backgroundTint="#CADAD6"
+            android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent">
@@ -202,7 +206,7 @@
             android:layout_marginEnd="62dp"
             android:layout_marginBottom="71dp"
             android:background="@drawable/curved_layout"
-            android:backgroundTint="#CADAD6"
+            android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent">
@@ -228,7 +232,7 @@
                 android:layout_marginEnd="176dp"
                 android:layout_marginBottom="9dp"
                 android:text="12:30 AM"
-                android:textColor="@color/black"
+                android:textColor="@color/sleep_tosca"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -265,9 +269,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="157dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="157dp"
-        android:layout_marginBottom="629dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="605dp"
         app:layout_constraintBottom_toTopOf="@+id/sleep_reminder_mainlayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tosca"
+    android:background="@color/white"
     tools:context=".bmicalculator">
 
     <TextView
@@ -18,8 +18,8 @@
         android:background="@drawable/curved_textview"
         android:backgroundTint="#5BD6C8"
         android:gravity="center"
-        android:text="BMI Calculator"
-        android:textColor="@color/black"
+        android:text="BMI CALCULATOR"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -109,7 +109,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="68dp"
-            android:backgroundTint="#16BFBF"
+            android:backgroundTint="#B1CCC5"
             android:textColor="@color/black"
             android:text="Reset" />
 
@@ -123,7 +123,7 @@
             android:layout_marginEnd="31dp"
             android:layout_marginBottom="68dp"
             android:backgroundTint="#16BFBF"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_toStartOf="@+id/bmicalculator_resetbutton"
             android:text="CALCULATE BMI"
             android:textSize="11sp" />

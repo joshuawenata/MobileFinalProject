@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#12A893"
+    android:background="#37B6B5"
     tools:context=".MainActivity">
 
     <!-- harus di resize kyknya, -->
@@ -48,7 +48,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/main"
         android:background="@drawable/extra_curved30"
-        android:backgroundTint="#C9F3F4"
+        android:backgroundTint="@color/white"
         android:gravity="center"
         android:textAlignment="center">
 
@@ -92,7 +92,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:background="@drawable/curved_layout"
-                        android:backgroundTint="#1976D2"
+                        android:backgroundTint="#A0E4E0"
                         android:padding="10dp"
                         android:src="@drawable/celebratelogo" />
 
@@ -171,7 +171,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:background="@drawable/curved_layout"
-                        android:backgroundTint="#1976D2"
+                        android:backgroundTint="#A0E4E0"
                         android:padding="10dp"
                         android:src="@drawable/alarmlogo" />
 
