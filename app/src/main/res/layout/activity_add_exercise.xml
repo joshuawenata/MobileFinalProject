@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddExercise">
+    tools:context=".AddExercise"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/add_excersize_title"
@@ -26,24 +27,31 @@
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:textColor="@color/black"
-        android:background="@drawable/curved_relativelayout"
-        android:backgroundTint="#CADAD6"
+        android:background="@drawable/curved_relativelayoutall"
+        android:backgroundTint="@color/sleep_tosca"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/add_excersize_set_text"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginHorizontal="50dp"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:hint="@string/set_excersize_name" />
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@color/white"
+            android:hint="@string/set_excersize_name"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/white"/>
 
         <TimePicker
             android:id="@+id/add_excersize_simpleTimePicker"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:timePickerMode="spinner" />
+            android:timePickerMode="spinner"
+            android:numbersBackgroundColor="@color/white"
+            android:numbersInnerTextColor="@color/black"
+            android:numbersSelectorColor="@color/black"
+            android:numbersTextColor="@color/black"
+            />
 
 
         <TextView
@@ -52,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="how many times?" />
 
         <LinearLayout
@@ -66,14 +74,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:hint="ex: 30" />
+                android:textColor="@color/white"
+                android:hint="ex: 30"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/repetition"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
         </LinearLayout>
 
         <Button
@@ -81,7 +92,7 @@
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/add_excersize_ask_text"
-            android:backgroundTint="#16BFBF"
+            android:backgroundTint="@color/tosca"
             android:textColor="@color/black"
             android:text="Submit"
             android:onClick="addExcercise"
