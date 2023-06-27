@@ -30,19 +30,18 @@
         android:layout_marginBottom="149dp"
         android:background="@drawable/curved_relativelayoutall"
         android:backgroundTint="#C9F3F4"
-        android:gravity="center"
         android:layout_marginHorizontal="50dp">
 
         <RelativeLayout
             android:id="@+id/caloryneeds_height_layout"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:layout_above="@+id/caloryneeds_weight_layout"
+            android:layout_below="@id/caloryneeds_spinner"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="48dp"
             android:layout_marginEnd="52dp"
-            android:layout_marginBottom="62dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/curved_relativelayoutall"
             android:backgroundTint="#5BD6C8">
 
@@ -73,16 +72,12 @@
 
             <TextView
                 android:id="@+id/caloryneeds_height_text"
-                android:layout_width="49dp"
-                android:layout_height="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="75dp"
                 android:layout_marginTop="18dp"
-                android:layout_marginEnd="76dp"
-                android:layout_marginBottom="65dp"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:text="Height"
@@ -91,14 +86,15 @@
 
         <RelativeLayout
             android:id="@+id/caloryneeds_age_layout"
-            android:layout_width="88dp"
+            android:layout_width="wrap_content"
             android:layout_height="108dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/caloryneeds_weight_layout"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="162dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="26dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/curved_relativelayoutall"
             android:backgroundTint="#A2F1E8">
 
@@ -136,11 +132,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="66dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="Age"
                 android:textColor="@color/black"
@@ -149,14 +141,13 @@
 
         <RelativeLayout
             android:id="@+id/caloryneeds_weight_layout"
-            android:layout_width="88dp"
+            android:layout_width="wrap_content"
             android:layout_height="108dp"
+            android:layout_below="@id/caloryneeds_height_layout"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="162dp"
-            android:layout_marginBottom="27dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="50dp"
             android:background="@drawable/curved_relativelayoutall"
             android:backgroundTint="#A2F1E8">
 
@@ -205,17 +196,16 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-
         <Spinner
             android:id="@+id/caloryneeds_spinner"
             android:layout_width="208dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/caloryneeds_height_layout"
+            android:layout_below="@id/caloryneeds_select_text"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="46dp"
             android:layout_marginEnd="46dp"
-            android:layout_marginBottom="62dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/curved_relativelayoutall"
             android:backgroundTint="#16BFBF"
             android:textColor="@color/black"
@@ -224,11 +214,11 @@
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/caloryneeds_textView2"
+            android:id="@+id/caloryneeds_select_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/caloryneeds_spinner"
             android:layout_marginBottom="19dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Select Physical Activity"
             android:textColor="@color/black"
@@ -255,17 +245,16 @@
         app:layout_constraintVertical_bias="0.906">
 
         <TextView
-            android:id="@+id/caloryneeds__title"
-            android:layout_width="wrap_content"
+            android:id="@+id/caloryneeds_title"
+            android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="54dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="54dp"
             android:layout_marginBottom="52dp"
+            android:layout_marginHorizontal="20dp"
             android:background="@drawable/curved_textview"
             android:backgroundTint="@color/white"
             android:gravity="center"

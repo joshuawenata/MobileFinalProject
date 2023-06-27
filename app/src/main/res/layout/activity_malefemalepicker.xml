@@ -42,14 +42,14 @@
             android:layout_height="178dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="59dp"
-            android:layout_marginEnd="34dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="25dp"
             android:background="#8C8181">
 
             <ImageView
                 android:id="@+id/malefemalepicker_femaleview"
-                android:layout_width="111dp"
-                android:layout_height="120dp"
+                android:layout_width="119dp"
+                android:layout_height="124dp"
                 android:layout_above="@+id/malefemalepicker_textView_female"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
@@ -75,7 +75,8 @@
             android:layout_height="178dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="62dp"
             android:background="@color/white">
 
@@ -124,10 +125,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginHorizontal="100dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
         android:layout_marginBottom="42dp"
         android:textColor="@color/white"
+        android:backgroundTint="@color/blue_dark"
         android:text="Confirm" />
 
 </RelativeLayout>
