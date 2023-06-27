@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
     android:layout_height="150dp"
-    android:layout_marginHorizontal="40dp"
+    android:layout_marginHorizontal="30dp"
     android:layout_marginTop="20dp"
-    android:background="@drawable/extra_curved30"
+    android:background="@drawable/curved_relativelayoutall"
     android:backgroundTint="@color/exc_teal"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/exercizelayout_time"
-        android:layout_width="137dp"
+        android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginEnd="19dp"
-        android:layout_marginBottom="87dp"
         android:gravity="center"
         android:text="00:00 am"
         android:textColor="@color/black"
@@ -29,24 +29,20 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="37dp"
+        android:layout_marginStart="50dp"
         android:textColor="@color/black"
-        android:layout_marginBottom="17dp"
         android:gravity="center"
-        android:minWidth="48dp"
-        android:minHeight="48dp" />
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
         android:id="@+id/exercizelayout_title"
-        android:layout_width="120dp"
-        android:layout_height="53dp"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="78dp"
-        android:layout_toStartOf="@+id/exercizelayout_time"
+        android:layout_marginStart="10dp"
         android:text="Pushup"
         android:textColor="@color/black"
-        android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -56,11 +52,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="20dp"
         android:textColor="@color/black"
-        android:layout_toStartOf="@+id/exercizelayout_switch"
         android:text="30 Times"
         android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
         android:textSize="20sp" />
 </RelativeLayout>
