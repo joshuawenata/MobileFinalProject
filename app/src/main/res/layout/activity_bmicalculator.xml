@@ -9,11 +9,9 @@
 
     <TextView
         android:id="@+id/bmicalculator_maintext"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_above="@+id/bmicalculator_mainlayout"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="53dp"
         android:layout_marginBottom="18dp"
         android:background="@drawable/curved_textview"
         android:backgroundTint="#5BD6C8"
@@ -22,28 +20,19 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        android:layout_marginHorizontal="50dp"
+        />
 
     <RelativeLayout
         android:id="@+id/bmicalculator_secondarylayout"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="58dp"
         android:layout_marginBottom="36dp"
-        android:background="@drawable/curved_relativelayout"
+        android:background="@drawable/curved_relativelayoutall"
         android:backgroundTint="#16BFBF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmicalculator_mainlayout"
-        app:layout_constraintVertical_bias="0.921">
+        android:gravity="center"
+        android:layout_marginHorizontal="50dp">
 
         <TextView
             android:id="@+id/bmicalculator_title"
@@ -86,20 +75,15 @@
 
     <RelativeLayout
         android:id="@+id/bmicalculator_mainlayout"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="56dp"
         android:layout_marginBottom="156dp"
-        android:background="@drawable/curved_relativelayout"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/curved_relativelayoutall"
         android:backgroundTint="#C9F3F4"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmicalculator_maintext">
+        android:gravity="center">
 
         <Button
             android:id="@+id/bmicalculator_resetbutton"
@@ -107,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="68dp"
             android:backgroundTint="#B1CCC5"
             android:textColor="@color/black"
@@ -115,13 +99,12 @@
 
         <Button
             android:id="@+id/bmicalculator_calcbutton"
-            android:layout_width="131dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="31dp"
             android:layout_marginBottom="68dp"
+            android:layout_marginHorizontal="20dp"
             android:backgroundTint="#16BFBF"
             android:textColor="@color/white"
             android:layout_toStartOf="@+id/bmicalculator_resetbutton"
@@ -138,7 +121,7 @@
             android:layout_marginStart="53dp"
             android:layout_marginEnd="47dp"
             android:layout_marginBottom="312dp"
-            android:background="@drawable/extra_curved30"
+            android:background="@drawable/curved_relativelayoutall"
             android:backgroundTint="#5BD6C8">
 
             <TextView
@@ -174,9 +157,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="78dp"
                 android:layout_marginTop="18dp"
-                android:layout_marginEnd="80dp"
                 android:layout_marginBottom="63dp"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -193,7 +174,7 @@
             android:layout_marginStart="53dp"
             android:layout_marginEnd="47dp"
             android:layout_marginBottom="164dp"
-            android:background="@drawable/extra_curved30"
+            android:background="@drawable/curved_relativelayoutall"
             android:backgroundTint="#A2F1E8"
             tools:layout_editor_absoluteX="-72dp"
             tools:layout_editor_absoluteY="332dp">
@@ -231,9 +212,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="76dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="80dp"
                 android:layout_marginBottom="66dp"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -242,12 +221,11 @@
 
         <TextView
             android:id="@+id/bmicalculator_statustext"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/bmicalculator_height_layout"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="107dp"
             android:layout_marginBottom="-410dp"
+            android:textAlignment="center"
             android:text="Obese"
             android:textColor="@color/black"
             android:textSize="30sp"
