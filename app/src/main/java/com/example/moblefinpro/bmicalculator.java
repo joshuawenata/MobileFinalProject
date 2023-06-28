@@ -15,14 +15,12 @@ import java.text.DecimalFormat;
 
 public class bmicalculator extends AppCompatActivity {
 
-    private TextView bmi_weight;
-    private TextView bmi_height;
-    private TextView bmi_view;
-    private SeekBar weight_bar;
-    private SeekBar height_bar;
+    private TextView bmi_weight, bmi_height, bmi_view, bmi_category;
+    private SeekBar weight_bar, height_bar;
     private double height, weight, bmi;
     final int minHeight = 90;
     final int minWeight = 1;
+    private String category[] = {"Underweight", "Healthy Weight", "Overweight", "Obese"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +30,15 @@ public class bmicalculator extends AppCompatActivity {
         bmi_weight = (TextView) findViewById(R.id.bmicalculator_weight_number);
         bmi_height = (TextView) findViewById(R.id.bmicalculator_height_number);
         bmi_view = (TextView) findViewById(R.id.bmicalculator_view);
+        bmi_category = (TextView) findViewById(R.id.bmicalculator_statustext);
 
         weight_bar = (SeekBar) findViewById(R.id.bmicalculator_weight_seekbar);
         height_bar = (SeekBar) findViewById(R.id.bmicalculator_height_seekbar);
 
         Button confirmButton = (Button) findViewById(R.id.bmicalculator_calcbutton);
         Button resetButton = (Button) findViewById(R.id.bmicalculator_resetbutton);
+
+        bmi_view.setText("0");
 
         // Height bar values adjusting
         height_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -101,6 +102,7 @@ public class bmicalculator extends AppCompatActivity {
                 Log.d("BMI", "onClick: " + bmi); */
 
                 bmi_view.setText(new DecimalFormat("##.##").format(bmi));
+                bmi_category.setText(checkStatus(bmi));
             }
         });
 
@@ -111,11 +113,27 @@ public class bmicalculator extends AppCompatActivity {
                 bmi_height.setText(""+minHeight);
                 bmi_weight.setText(""+minWeight);
                 bmi_view.setText("0");
+                bmi_category.setText("Your BMI desc!");
 
                 height_bar.setProgress(0);
                 weight_bar.setProgress(0);
             }
         });
 
+    }
+
+    public String checkStatus(double bmi){
+
+        if(bmi < 18.5) {
+            return category[0];
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            return category[1];
+        } else if (bmi >= 25.0 && bmi <= 29.9) {
+            return category[2];
+        } else if (bmi >= 30) {
+            return category[3];
+        }
+
+        return "";
     }
 }

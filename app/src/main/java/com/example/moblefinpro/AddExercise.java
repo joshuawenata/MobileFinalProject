@@ -50,11 +50,16 @@ public class AddExercise extends AppCompatActivity {
             DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid()).child("exercise").push();
             myRef.child("name").setValue(name.getText().toString());
             myRef.child("repetition").setValue(repetition.getText().toString());
-            myRef.child("time").setValue(time.getHour()+":"+time.getMinute());
+            myRef.child("time").setValue(time.getHour() + ":" + checkDigit(time.getMinute()));
+            myRef.child("status").setValue(0);
 
             startActivity(new Intent(AddExercise.this, exerciseReminder.class));
             finish();
         }
 
+    }
+
+    public String checkDigit(int number) {
+        return number <= 9 ? "0" + number : String.valueOf(number);
     }
 }

@@ -2,6 +2,7 @@ package com.example.moblefinpro.object;
 
 public class Exercise {
     private String name, repetition, time;
+    int status;
 
     public String getName() {
         return name;
@@ -26,4 +27,7 @@ public class Exercise {
     public void setTime(String time) {
         this.time = time;
     }
+
+    public int getStatus() { return status; }
+    public void setStatus(int status) { this.status = status; }
 }

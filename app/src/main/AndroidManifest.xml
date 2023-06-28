@@ -63,7 +63,7 @@
             android:name=".MainActivity"
             android:exported="false" />
 
-        <receiver android:name=".notificationReceiver" />
+        <receiver android:name=".receiver.notificationReceiver" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.moblefinpro;
+package com.example.moblefinpro.receiver;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -10,6 +10,9 @@ import android.content.Intent;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+
+import com.example.moblefinpro.R;
+import com.example.moblefinpro.eatreminder;
 
 public class notificationReceiver extends BroadcastReceiver {
 
