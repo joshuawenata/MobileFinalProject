@@ -69,7 +69,7 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
                     Intent intent = new Intent(exerciseAdapter.this.context, notificationReceiver.class);
 
                     intent.putExtra("notifType", "Exercise");
-                    intent.putExtra("message", "Let's burn some calory!");
+                    intent.putExtra("message", "do "+exercisesList.get(position).getName());
 
                     PendingIntent alarmIntent = PendingIntent.getBroadcast(exerciseAdapter.this.context, 0,
                             intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);

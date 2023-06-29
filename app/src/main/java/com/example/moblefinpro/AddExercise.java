@@ -27,9 +27,9 @@ public class AddExercise extends AppCompatActivity {
     }
 
     private void initiallize() {
-        name = findViewById(R.id.add_exercise_set_text);
+        name = findViewById(R.id.add_excersize_set_text);
         repetition = findViewById(R.id.add_excersize_repetition);
-        time = findViewById(R.id.add_exercise_simpleTimePicker);
+        time = findViewById(R.id.add_excersize_simpleTimePicker);
     }
 
     public void addExercise(View view) {
