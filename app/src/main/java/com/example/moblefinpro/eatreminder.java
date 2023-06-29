@@ -216,7 +216,6 @@ public class eatreminder extends AppCompatActivity {
                         Log.d("", "onTimeSet: " + time[0] + ":" + checkDigit(time[1]));
                     }
                 }, hour, minute, false);
-
         // at last we are calling show to
         // display our time picker dialog.
         timePickerDialog.show();
@@ -240,7 +239,7 @@ public class eatreminder extends AppCompatActivity {
 
         AlarmManager alarm = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-        switch(switchStatus) {
+        switch(switchStatus){
             case 1:
                 int hour = time[0], minute = time[1];
 
@@ -249,12 +248,6 @@ public class eatreminder extends AppCompatActivity {
                 startTime.set(Calendar.HOUR_OF_DAY, hour);
                 startTime.set(Calendar.MINUTE, minute);
                 startTime.set(Calendar.SECOND, 0);
-
-                if (startTime.getTimeInMillis() <= System.currentTimeMillis()) {
-                    // Add a day to the alarm time
-                    startTime.add(Calendar.DAY_OF_MONTH, 1);
-                }
-
                 long alarmStartTime = startTime.getTimeInMillis();
 
                 // Set alarm

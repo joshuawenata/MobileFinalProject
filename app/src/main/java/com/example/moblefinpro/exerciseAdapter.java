@@ -5,7 +5,6 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -32,7 +30,6 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
 
     Context context;
     ArrayList<Exercise> exercisesList;
-    ArrayList<String> keys;
 
     public ArrayList<Exercise> getExercisesList() {
         return exercisesList;
@@ -42,10 +39,9 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
         this.exercisesList = exercisesList;
     }
 
-    public exerciseAdapter(Context context, ArrayList<Exercise> newList, ArrayList<String> keys) {
+    public exerciseAdapter(Context context, ArrayList<Exercise> newList) {
         this.context = context;
         this.exercisesList = newList;
-        this.keys = keys;
     }
 
     @NonNull
@@ -65,19 +61,15 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
 
         DatabaseReference myRef = database.getReference().child("Users").
                 child(firebaseUser.getUid()).child("exercise");
-
         mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
                 if (isChecked) {
-                    myRef.child(keys.get(position)).child("status").setValue(1);
-
-                    // myRef.child(exercisesList.get(position).getKey()).child("status").setValue(1);
+                    myRef.child(exercisesList.get(position).getKey()).child("status").setValue(1);
                     Intent intent = new Intent(exerciseAdapter.this.context, notificationReceiver.class);
 
                     intent.putExtra("notifType", "Exercise");
-                    intent.putExtra("message", "do " + exercisesList.get(position).getName().toLowerCase());
+                    intent.putExtra("message", "do "+exercisesList.get(position).getName());
 
                     PendingIntent alarmIntent = PendingIntent.getBroadcast(exerciseAdapter.this.context, 0,
                             intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
@@ -95,12 +87,10 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
                     startTime.set(Calendar.HOUR_OF_DAY, hour);
                     startTime.set(Calendar.MINUTE, minute);
                     startTime.set(Calendar.SECOND, 0);
-
                     if (startTime.getTimeInMillis() <= System.currentTimeMillis()) {
                         // Add a day to the alarm time
                         startTime.add(Calendar.DAY_OF_MONTH, 1);
                     }
-
                     long alarmStartTime = startTime.getTimeInMillis();
 
                     // Set alarm
@@ -109,8 +99,7 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
                     Toast.makeText(exerciseAdapter.this.context, "Exercise reminder has been set.", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    myRef.child(keys.get(position)).child("status").setValue(0);
-                    // myRef.child(exercisesList.get(position).getKey()).child("status").setValue(0);
+                    myRef.child(exercisesList.get(position).getKey()).child("status").setValue(0);
                 }
             }
         });
@@ -118,7 +107,6 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
         holder.txtTitle.setText(exercisesList.get(position).getName());
         holder.txtTime.setText(exercisesList.get(position).getTime());
         holder.txtReps.setText(exercisesList.get(position).getRepetition()+" Reps");
-
         if(exercisesList.get(position).getStatus()==0){
             holder.txtStatus.setChecked(false);
         }else{
