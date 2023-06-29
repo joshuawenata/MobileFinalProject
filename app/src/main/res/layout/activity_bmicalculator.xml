@@ -221,6 +221,7 @@
 
         <TextView
             android:id="@+id/bmicalculator_statustext"
+            android:text="Your BMI desc!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/bmicalculator_height_layout"
@@ -228,7 +229,7 @@
             android:textAlignment="center"
             android:text="Obese"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
     </RelativeLayout>

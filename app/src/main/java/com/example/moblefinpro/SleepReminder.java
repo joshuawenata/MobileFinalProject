@@ -105,8 +105,8 @@ public class SleepReminder extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid());
 
-        myRef.child("bedtime").setValue(bedtime.getHour()+":"+bedtime.getMinute());
-        bedtimetext.setText(bedtime.getHour()+":"+bedtime.getMinute());
+        myRef.child("bedtime").setValue(bedtime.getHour()+":"+ checkDigit(bedtime.getMinute()));
+        bedtimetext.setText(bedtime.getHour()+":"+ checkDigit(bedtime.getMinute()));
     }
 
     public void addWakeUp(View view) {
@@ -116,7 +116,12 @@ public class SleepReminder extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid());
 
-        myRef.child("wakeup").setValue(wakeup.getHour()+":"+wakeup.getMinute());
-        wakeuptext.setText(wakeup.getHour()+":"+wakeup.getMinute());
+        myRef.child("wakeup").setValue(wakeup.getHour()+":" + checkDigit(wakeup.getMinute()));
+        wakeuptext.setText(wakeup.getHour()+":"+ checkDigit(wakeup.getMinute()));
     }
+
+    public String checkDigit(int number) {
+        return number <= 9 ? "0" + number : String.valueOf(number);
+    }
+
 }
