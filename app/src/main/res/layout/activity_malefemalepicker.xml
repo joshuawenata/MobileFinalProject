@@ -29,7 +29,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="123dp"
-        android:background="@drawable/curved_relativelayout"
+        android:background="@drawable/curved_relativelayoutall"
         android:backgroundTint="#C9F3F4"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,12 +39,13 @@
         <RelativeLayout
             android:id="@+id/malefemalepicker_femaleview_layout"
             android:layout_width="145dp"
+            android:backgroundTint="#8C8181"
             android:layout_height="178dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="62dp"
             android:layout_marginEnd="25dp"
-            android:background="#8C8181">
+            android:background="@drawable/curved_relativelayout">
 
             <ImageView
                 android:id="@+id/malefemalepicker_femaleview"
@@ -78,30 +79,36 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="62dp"
-            android:background="@color/white">
+            android:background="@drawable/curved_relativelayout"
+            android:backgroundTint="@color/white">
 
             <ImageView
                 android:id="@+id/malefemalepicker_maleview"
-                android:layout_width="119dp"
-                android:layout_height="124dp"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
                 android:layout_above="@+id/malefemalepicker_textView_male"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
                 android:src="@drawable/malepic" />
 
             <TextView
                 android:id="@+id/malefemalepicker_textView_male"
-                android:layout_width="57dp"
+                android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/curved_relativelayout"
+                android:backgroundTint="@color/white"
                 android:gravity="center"
                 android:text="Male"
-                android:textColor="@color/black"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/black" />
         </RelativeLayout>
 
         <TextView
@@ -114,7 +121,7 @@
             android:layout_marginTop="267dp"
             android:layout_marginBottom="13dp"
             android:gravity="center"
-            android:text=""
+            android:text="Male"
             android:textColor="@color/black"
             android:textSize="30sp" />
 

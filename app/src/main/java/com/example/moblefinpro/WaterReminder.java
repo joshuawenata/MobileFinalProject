@@ -31,11 +31,11 @@ public class WaterReminder extends AppCompatActivity {
                 buttonClickCount++;
 
                 if (buttonClickCount % 4 == 1) {
-                    imageView.setImageResource(R.drawable.glass2);
-                } else if (buttonClickCount % 4 == 2) {
                     imageView.setImageResource(R.drawable.glass3);
-                } else {
+                } else if (buttonClickCount % 4 == 2) {
                     imageView.setImageResource(R.drawable.glass4);
+                } else {
+                    imageView.setImageResource(R.drawable.glass5);
                 }
             }
         });

@@ -14,7 +14,7 @@
         android:layout_above="@+id/bmicalculator_mainlayout"
         android:layout_marginBottom="18dp"
         android:background="@drawable/curved_textview"
-        android:backgroundTint="#5BD6C8"
+        android:backgroundTint="#37B7B5"
         android:gravity="center"
         android:text="BMI CALCULATOR"
         android:textColor="@color/white"
@@ -30,7 +30,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="36dp"
         android:background="@drawable/curved_relativelayoutall"
-        android:backgroundTint="#16BFBF"
+        android:backgroundTint="#37B7B5"
         android:gravity="center"
         android:layout_marginHorizontal="50dp">
 

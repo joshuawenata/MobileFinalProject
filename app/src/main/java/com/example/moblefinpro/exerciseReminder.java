@@ -13,15 +13,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.moblefinpro.object.Exercise;
 import com.example.moblefinpro.receiver.notificationReceiver;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -45,8 +42,8 @@ public class exerciseReminder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_reminder);
 
-        Button btnMove = findViewById(R.id.excersize_reminder_intentbtn);
-        RecyclerView recyclerView = findViewById(R.id.excersize_reminder_recyclerView);
+        Button btnMove = findViewById(R.id.exercise_reminder_intentbtn);
+        RecyclerView recyclerView = findViewById(R.id.exercise_reminder_recyclerView);
         setNotificationChannel("Exercise");
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
