@@ -47,11 +47,13 @@ public class AddExercise extends AppCompatActivity {
             FirebaseAuth mAuth = FirebaseAuth.getInstance();
             FirebaseUser firebaseUser = mAuth.getCurrentUser();
             FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid()).child("exercise").push();
-            myRef.child("name").setValue(name.getText().toString());
-            myRef.child("repetition").setValue(repetition.getText().toString());
-            myRef.child("time").setValue(time.getHour() + ":" + checkDigit(time.getMinute()));
-            myRef.child("status").setValue(0);
+            DatabaseReference myRef = database.getReference().child("Users").child(firebaseUser.getUid()).child("exercise");
+            String key = myRef.push().getKey();
+            myRef.child(key).child("key").setValue(key);
+            myRef.child(key).child("name").setValue(name.getText().toString());
+            myRef.child(key).child("repetition").setValue(repetition.getText().toString());
+            myRef.child(key).child("time").setValue(time.getHour() + ":" + checkDigit(time.getMinute()));
+            myRef.child(key).child("status").setValue(0);
 
             startActivity(new Intent(AddExercise.this, exerciseReminder.class));
             finish();

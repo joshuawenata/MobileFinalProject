@@ -30,7 +30,7 @@ public class loginpage extends AppCompatActivity {
         if(user!=null){
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
-            finish();
+            finishAffinity();
         }
 
     }
@@ -68,7 +68,7 @@ public class loginpage extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Login successful
                                 startActivity(new Intent(loginpage.this, MainActivity.class));
-                                finish();
+                                finishAffinity();
                             } else {
                                 // Login failed
                                 Toast.makeText(loginpage.this, "Login failed.", Toast.LENGTH_SHORT).show();

@@ -1,8 +1,16 @@
 package com.example.moblefinpro.object;
 
 public class Exercise {
-    private String name, repetition, time;
+    private String name, repetition, time, key;
     int status;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 
     public String getName() {
         return name;

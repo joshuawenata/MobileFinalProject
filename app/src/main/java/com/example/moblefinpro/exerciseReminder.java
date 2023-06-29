@@ -37,7 +37,6 @@ public class exerciseReminder extends AppCompatActivity {
     Context context = this;
     private int arraySize;
     ArrayList<Exercise> newList = new ArrayList<>();
-    ArrayList<String> keys = new ArrayList<>();
     ArrayList<Integer> switchStatus = new ArrayList<>();
     int[] time = {0, 0};
 
@@ -62,11 +61,10 @@ public class exerciseReminder extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     newList.add(postSnapshot.getValue(Exercise.class));
-                    keys.add(postSnapshot.getKey());
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                exerciseAdapter newAdapter = new exerciseAdapter(context, newList, keys);
+                exerciseAdapter newAdapter = new exerciseAdapter(context, newList);
                 recyclerView.setAdapter(newAdapter);
                 newAdapter.notifyDataSetChanged();
             }
@@ -81,6 +79,7 @@ public class exerciseReminder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(exerciseReminder.this, AddExercise.class));
+                finish();
             }
         });
     }
