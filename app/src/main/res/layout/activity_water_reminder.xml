@@ -77,7 +77,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="121dp"
-            android:layout_marginEnd="95dp"
+            android:layout_marginEnd="96dp"
             android:background="@android:color/black" />
 
         <View

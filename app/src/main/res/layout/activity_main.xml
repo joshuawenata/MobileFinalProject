@@ -85,15 +85,20 @@
                 android:layout_height="wrap_content">
 
                 <!-- First Row -->
-                <TableRow>
-                    <ImageView
+                <TableRow
+                    android:layout_width="10dp"
+                    android:background="@drawable/curved_layout"
+                    android:backgroundTint="#37B7B5"
+                    android:layout_margin="30dp">
 
-                        android:layout_height="55dp"
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="2"
                         android:background="@drawable/curved_layout"
-                        android:backgroundTint="#A0E4E0"
-                        android:padding="10dp"
+                        android:backgroundTint="#37B7B5"
+                        android:padding="3dp"
                         android:src="@drawable/celebratelogo" />
 
                 </TableRow>
@@ -102,12 +107,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:gravity="center"
                     >
 
                     <LinearLayout
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#C7F6F5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -135,6 +142,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#C7F6F5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -166,16 +175,20 @@
                 </LinearLayout>
 
                 <!-- Third Row -->
-                <TableRow android:layout_marginTop="50dp">
+                <TableRow
+                    android:layout_width="382dp"
+                    android:layout_margin="30dp"
+                    android:background="@drawable/curved_layout"
+                    android:backgroundTint="#37B7B5">
 
                     <ImageView
-                        android:layout_width="374dp"
-                        android:layout_height="55dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:background="@drawable/curved_layout"
-                        android:backgroundTint="#A0E4E0"
-                        android:padding="10dp"
+                        android:backgroundTint="#37B7B5"
+                        android:padding="3dp"
                         android:src="@drawable/alarmlogo" />
 
                 </TableRow>
@@ -184,7 +197,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:gravity="center"
                     >
@@ -192,6 +205,8 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#C7F6F5"
                         android:orientation="vertical"
                         android:layout_marginHorizontal="15dp"
                         >
@@ -217,6 +232,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#C7F6F5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -247,15 +264,18 @@
 
                 <!-- Fifth Row -->
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="40dp"
                     android:orientation="horizontal"
                     android:layout_marginBottom="100dp"
                     android:gravity="center"
                     >
 
                     <LinearLayout
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#C7F6F5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -283,6 +303,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:background="@drawable/curved_layout"
+                        android:backgroundTint="#C7F6F5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"

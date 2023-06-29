@@ -8,19 +8,28 @@
     android:background="@color/white">
 
     <TextView
-        android:id="@+id/add_excersize_title"
-        android:layout_width="match_parent"
+        android:id="@+id/add_exercise_title"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="100dp"
-        android:text="@string/set_new_excersize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="279dp"
+        android:text="Exercise Reminder"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/add_excersize_relativeLayout"
-        android:layout_below="@+id/add_excersize_title"
+        android:id="@+id/add_exercise_relativeLayout"
+        android:layout_below="@+id/add_exercise_title"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginHorizontal="50dp"
@@ -32,21 +41,24 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/add_excersize_set_text"
+            android:id="@+id/add_exercise_set_text"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textAlignment="center"
             android:layout_marginHorizontal="20dp"
             android:textColor="@color/white"
             android:hint="@string/set_excersize_name"
-            android:textColorHint="@color/white"
-            android:backgroundTint="@color/white"/>
+            android:textColorHint="@color/black"
+            android:backgroundTint="@color/black"/>
 
         <TimePicker
-            android:id="@+id/add_excersize_simpleTimePicker"
+            android:id="@+id/add_exercise_simpleTimePicker"
             android:layout_width="match_parent"
+            android:layout_margin="20dp"
             android:layout_height="140dp"
             android:timePickerMode="spinner"
+            android:background="@drawable/curved_layout"
+            android:backgroundTint="@color/white"
             android:numbersBackgroundColor="@color/white"
             android:numbersInnerTextColor="@color/black"
             android:numbersSelectorColor="@color/black"
@@ -55,50 +67,54 @@
 
 
         <TextView
-            android:id="@+id/add_excersize_ask_text"
+            android:id="@+id/add_exercise_ask_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:text="how many times?" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/add_excersize_button">
+            android:layout_below="@+id/add_exercise_button">
 
             <EditText
                 android:id="@+id/add_excersize_repetition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:hint="ex: 30"
+                android:background="@color/white"
                 android:textSize="15sp"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/black"
                 android:backgroundTint="@color/white"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:text="@string/repetition"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/add_excersize_button"
-            android:layout_width="121dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/add_excersize_ask_text"
-            android:backgroundTint="@color/tosca"
-            android:textColor="@color/black"
-            android:text="Submit"
-            android:onClick="addExcercise"
-            />
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/add_exercise_button"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_exercise_relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="@color/sleep_tosca"
+        android:onClick="addExercise"
+        android:text="Done"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
