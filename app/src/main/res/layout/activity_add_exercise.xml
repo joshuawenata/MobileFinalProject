@@ -76,6 +76,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:hint="ex: 30"
+                android:textSize="15sp"
                 android:textColorHint="@color/white"
                 android:backgroundTint="@color/white"/>
 

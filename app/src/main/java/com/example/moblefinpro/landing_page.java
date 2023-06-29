@@ -71,7 +71,7 @@ public class landing_page extends AppCompatActivity {
         if(user!=null){
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
-            finish();
+            finishAffinity();
         }else{
             Intent signInIntent = mGoogleSignInClient.getSignInIntent();
             startActivityForResult(signInIntent, RC_SIGN_IN);
