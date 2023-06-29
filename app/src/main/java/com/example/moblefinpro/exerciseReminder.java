@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -32,10 +33,8 @@ import java.util.Calendar;
 
 public class exerciseReminder extends AppCompatActivity {
     Context context = this;
-    private int arraySize;
     ArrayList<Exercise> newList = new ArrayList<>();
-    ArrayList<Integer> switchStatus = new ArrayList<>();
-    int[] time = {0, 0};
+    ArrayList<String> keys = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +57,11 @@ public class exerciseReminder extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     newList.add(postSnapshot.getValue(Exercise.class));
+                    keys.add(postSnapshot.getKey());
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false));
-                exerciseAdapter newAdapter = new exerciseAdapter(context, newList);
+                exerciseAdapter newAdapter = new exerciseAdapter(context, newList, keys);
                 recyclerView.setAdapter(newAdapter);
                 newAdapter.notifyDataSetChanged();
             }
@@ -79,40 +79,6 @@ public class exerciseReminder extends AppCompatActivity {
                 finish();
             }
         });
-    }
-
-    public void setNotification(String notificationType, String message, int switchStatus, int time[]) {
-        Intent intent = new Intent(exerciseReminder.this, notificationReceiver.class);
-
-        intent.putExtra("notifType", notificationType);
-        intent.putExtra("message", message);
-
-        PendingIntent alarmIntent = PendingIntent.getBroadcast(exerciseReminder.this, 0,
-                intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-
-        AlarmManager alarm = (AlarmManager) getSystemService(ALARM_SERVICE);
-
-        switch(switchStatus){
-            case 1:
-                int hour = time[0], minute = time[1];
-
-                // Create time
-                Calendar startTime = Calendar.getInstance();
-                startTime.set(Calendar.HOUR_OF_DAY, hour);
-                startTime.set(Calendar.MINUTE, minute);
-                startTime.set(Calendar.SECOND, 0);
-                long alarmStartTime = startTime.getTimeInMillis();
-
-                // Set alarm
-                alarm.set(AlarmManager.RTC_WAKEUP, alarmStartTime, alarmIntent);
-
-                Toast.makeText(this, notificationType + " reminder has been set.", Toast.LENGTH_SHORT).show();
-                break;
-
-            case 0:
-                alarm.cancel(alarmIntent);
-                break;
-        }
     }
 
     private void setNotificationChannel(String type){
