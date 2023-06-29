@@ -69,7 +69,7 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
                     Intent intent = new Intent(exerciseAdapter.this.context, notificationReceiver.class);
 
                     intent.putExtra("notifType", "Exercise");
-                    intent.putExtra("message", "do "+exercisesList.get(position).getName());
+                    intent.putExtra("message", "do " + exercisesList.get(position).getName().toLowerCase());
 
                     PendingIntent alarmIntent = PendingIntent.getBroadcast(exerciseAdapter.this.context, 0,
                             intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
@@ -87,10 +87,12 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
                     startTime.set(Calendar.HOUR_OF_DAY, hour);
                     startTime.set(Calendar.MINUTE, minute);
                     startTime.set(Calendar.SECOND, 0);
+
                     if (startTime.getTimeInMillis() <= System.currentTimeMillis()) {
                         // Add a day to the alarm time
                         startTime.add(Calendar.DAY_OF_MONTH, 1);
                     }
+
                     long alarmStartTime = startTime.getTimeInMillis();
 
                     // Set alarm
@@ -107,9 +109,10 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
         holder.txtTitle.setText(exercisesList.get(position).getName());
         holder.txtTime.setText(exercisesList.get(position).getTime());
         holder.txtReps.setText(exercisesList.get(position).getRepetition()+" Reps");
-        if(exercisesList.get(position).getStatus()==0){
+
+        if(exercisesList.get(position).getStatus() == 0) {
             holder.txtStatus.setChecked(false);
-        }else{
+        } else {
             holder.txtStatus.setChecked(true);
         }
     }
