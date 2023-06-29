@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class malefemalepicker extends AppCompatActivity {
     private String gender = "";
@@ -46,9 +47,14 @@ public class malefemalepicker extends AppCompatActivity {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(malefemalepicker.this, caloryneeds.class);
-                intent.putExtra("gender", gender);
-                startActivity(intent);
+                if(gender==""){
+                    Toast.makeText(malefemalepicker.this, "please choose gender!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(malefemalepicker.this, caloryneeds.class);
+                    intent.putExtra("gender", gender);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }

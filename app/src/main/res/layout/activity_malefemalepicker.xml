@@ -25,27 +25,23 @@
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="3dp"
         android:layout_marginBottom="123dp"
         android:background="@drawable/curved_relativelayoutall"
         android:backgroundTint="#C9F3F4"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:gravity="center">
 
         <RelativeLayout
             android:id="@+id/malefemalepicker_femaleview_layout"
             android:layout_width="145dp"
-            android:backgroundTint="#8C8181"
+            android:background="#8C8181"
             android:layout_height="178dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="62dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/curved_relativelayout">
+            android:layout_marginEnd="25dp">
 
             <ImageView
                 android:id="@+id/malefemalepicker_femaleview"
@@ -72,15 +68,14 @@
 
         <RelativeLayout
             android:id="@+id/malefemalepicker_maleview_layout"
+            android:background="@color/white"
             android:layout_width="145dp"
             android:layout_height="178dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="62dp"
-            android:background="@drawable/curved_relativelayout"
-            android:backgroundTint="@color/white">
+            android:layout_marginTop="62dp">
 
             <ImageView
                 android:id="@+id/malefemalepicker_maleview"
@@ -103,8 +98,6 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
-                android:background="@drawable/curved_relativelayout"
-                android:backgroundTint="@color/white"
                 android:gravity="center"
                 android:text="Male"
                 android:textAlignment="center"
@@ -117,11 +110,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="7dp"
             android:layout_marginTop="267dp"
             android:layout_marginBottom="13dp"
             android:gravity="center"
-            android:text="Male"
+            android:text="Pick Your Gender!"
             android:textColor="@color/black"
             android:textSize="30sp" />
 
