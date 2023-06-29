@@ -69,9 +69,10 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
                     Intent intent = new Intent(exerciseAdapter.this.context, notificationReceiver.class);
 
                     intent.putExtra("notifType", "Exercise");
-                    intent.putExtra("message", "do " + exercisesList.get(position).getName().toLowerCase());
+                    intent.putExtra("message", exercisesList.get(position).getName().toLowerCase());
+                    intent.putExtra("activity", "exercise");
 
-                    PendingIntent alarmIntent = PendingIntent.getBroadcast(exerciseAdapter.this.context, 0,
+                    PendingIntent alarmIntent = PendingIntent.getBroadcast(exerciseAdapter.this.context, 1,
                             intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
                     AlarmManager alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
@@ -108,7 +109,7 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
 
         holder.txtTitle.setText(exercisesList.get(position).getName());
         holder.txtTime.setText(exercisesList.get(position).getTime());
-        holder.txtReps.setText(exercisesList.get(position).getRepetition()+" Reps");
+        holder.txtReps.setText(exercisesList.get(position).getRepetition() + " Reps");
 
         if(exercisesList.get(position).getStatus() == 0) {
             holder.txtStatus.setChecked(false);

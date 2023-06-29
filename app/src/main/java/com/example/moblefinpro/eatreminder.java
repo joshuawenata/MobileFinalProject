@@ -242,6 +242,7 @@ public class eatreminder extends AppCompatActivity {
 
         intent.putExtra("notifType", notificationType);
         intent.putExtra("message", message);
+        intent.putExtra("activity", "eat");
 
         PendingIntent alarmIntent = PendingIntent.getBroadcast(eatreminder.this, 0,
                 intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
