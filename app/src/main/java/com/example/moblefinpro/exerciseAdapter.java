@@ -87,6 +87,10 @@ public class exerciseAdapter extends RecyclerView.Adapter<exerciseAdapter.Exerci
                     startTime.set(Calendar.HOUR_OF_DAY, hour);
                     startTime.set(Calendar.MINUTE, minute);
                     startTime.set(Calendar.SECOND, 0);
+                    if (startTime.getTimeInMillis() <= System.currentTimeMillis()) {
+                        // Add a day to the alarm time
+                        startTime.add(Calendar.DAY_OF_MONTH, 1);
+                    }
                     long alarmStartTime = startTime.getTimeInMillis();
 
                     // Set alarm
