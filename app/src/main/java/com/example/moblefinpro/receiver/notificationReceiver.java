@@ -13,6 +13,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import com.example.moblefinpro.R;
+import com.example.moblefinpro.SleepReminder;
 import com.example.moblefinpro.eatreminder;
 import com.example.moblefinpro.exerciseReminder;
 
@@ -38,6 +39,9 @@ public class notificationReceiver extends BroadcastReceiver {
                 break;
             case "exercise":
                 i = new Intent(context, exerciseReminder.class);
+                break;
+            case "sleep":
+                i = new Intent(context, SleepReminder.class);
                 break;
         }
 
