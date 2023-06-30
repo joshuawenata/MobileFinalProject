@@ -32,10 +32,7 @@ import java.util.Calendar;
 
 public class exerciseReminder extends AppCompatActivity {
     Context context = this;
-    private int arraySize;
     ArrayList<Exercise> newList = new ArrayList<>();
-    ArrayList<Integer> switchStatus = new ArrayList<>();
-    int[] time = {0, 0};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,43 +78,9 @@ public class exerciseReminder extends AppCompatActivity {
         });
     }
 
-    public void setNotification(String notificationType, String message, int switchStatus, int time[]) {
-        Intent intent = new Intent(exerciseReminder.this, notificationReceiver.class);
+    private void setNotificationChannel(String type) {
 
-        intent.putExtra("notifType", notificationType);
-        intent.putExtra("message", message);
-
-        PendingIntent alarmIntent = PendingIntent.getBroadcast(exerciseReminder.this, 0,
-                intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-
-        AlarmManager alarm = (AlarmManager) getSystemService(ALARM_SERVICE);
-
-        switch(switchStatus){
-            case 1:
-                int hour = time[0], minute = time[1];
-
-                // Create time
-                Calendar startTime = Calendar.getInstance();
-                startTime.set(Calendar.HOUR_OF_DAY, hour);
-                startTime.set(Calendar.MINUTE, minute);
-                startTime.set(Calendar.SECOND, 0);
-                long alarmStartTime = startTime.getTimeInMillis();
-
-                // Set alarm
-                alarm.set(AlarmManager.RTC_WAKEUP, alarmStartTime, alarmIntent);
-
-                Toast.makeText(this, notificationType + " reminder has been set.", Toast.LENGTH_SHORT).show();
-                break;
-
-            case 0:
-                alarm.cancel(alarmIntent);
-                break;
-        }
-    }
-
-    private void setNotificationChannel(String type){
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = type + "Channel";
             String description = "Channel for " + type + " reminder";
             int importance = NotificationManager.IMPORTANCE_HIGH;

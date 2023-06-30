@@ -76,10 +76,13 @@ public class eatreminder extends AppCompatActivity {
         myRef.child("breakfast").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.getValue()==null) {
+                if(snapshot.getValue() == null) {
                     myRef.child("breakfast").setValue(breakfast_time.getText().toString());
-                }else{
+                } else {
                     breakfast_time.setText(snapshot.getValue().toString());
+                    String[] time = breakfast_time.getText().toString().split(":");
+                    breakfastTime[0] = Integer.parseInt(time[0]);
+                    breakfastTime[1] = Integer.parseInt(time[1]);
                 }
             }
 
@@ -92,10 +95,13 @@ public class eatreminder extends AppCompatActivity {
         myRef.child("lunch").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.getValue()==null){
+                if(snapshot.getValue() == null) {
                     myRef.child("lunch").setValue(lunch_time.getText().toString());
-                }else{
+                } else {
                     lunch_time.setText(snapshot.getValue().toString());
+                    String[] time = lunch_time.getText().toString().split(":");
+                    lunchTime[0] = Integer.parseInt(time[0]);
+                    lunchTime[1] = Integer.parseInt(time[1]);
                 }
             }
 
@@ -108,10 +114,13 @@ public class eatreminder extends AppCompatActivity {
         myRef.child("dinner").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.getValue()==null){
+                if(snapshot.getValue() == null) {
                     myRef.child("dinner").setValue(dinner_time.getText().toString());
-                }else{
+                } else {
                     dinner_time.setText(snapshot.getValue().toString());
+                    String[] time = dinner_time.getText().toString().split(":");
+                    dinnerTime[0] = Integer.parseInt(time[0]);
+                    dinnerTime[1] = Integer.parseInt(time[1]);
                 }
             }
 
@@ -233,13 +242,14 @@ public class eatreminder extends AppCompatActivity {
 
         intent.putExtra("notifType", notificationType);
         intent.putExtra("message", message);
+        intent.putExtra("activity", "eat");
 
         PendingIntent alarmIntent = PendingIntent.getBroadcast(eatreminder.this, 0,
                 intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         AlarmManager alarm = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-        switch(switchStatus){
+        switch(switchStatus) {
             case 1:
                 int hour = time[0], minute = time[1];
 
@@ -248,6 +258,12 @@ public class eatreminder extends AppCompatActivity {
                 startTime.set(Calendar.HOUR_OF_DAY, hour);
                 startTime.set(Calendar.MINUTE, minute);
                 startTime.set(Calendar.SECOND, 0);
+
+                if (startTime.getTimeInMillis() <= System.currentTimeMillis()) {
+                    // Add a day to the alarm time
+                    startTime.add(Calendar.DAY_OF_MONTH, 1);
+                }
+
                 long alarmStartTime = startTime.getTimeInMillis();
 
                 // Set alarm
@@ -264,9 +280,9 @@ public class eatreminder extends AppCompatActivity {
         }
     }
 
-    private void setNotificationChannel(String type){
+    private void setNotificationChannel(String type) {
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = type + "Channel";
             String description = "Channel for " + type + " reminder";
             int importance = NotificationManager.IMPORTANCE_HIGH;
