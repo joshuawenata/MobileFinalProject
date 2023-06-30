@@ -35,7 +35,7 @@ import java.util.Calendar;
 public class eatreminder extends AppCompatActivity {
     private int breakfast, lunch, dinner; // Switch state
     // Time array to save times, passed to user's time in database later
-    private int breakfastTime[] = {6, 0}, lunchTime[] = {12, 0}, dinnerTime[] = {18, 00};
+    private int breakfastTime[] = {06, 00}, lunchTime[] = {12, 00}, dinnerTime[] = {18, 00};
     // Channel id for notification
     private final String breakfast_id = "Breakfast", lunch_id = "Lunch", dinner_id = "Dinner";
 
