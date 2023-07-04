@@ -11,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class caloryneeds extends AppCompatActivity {
 
     private TextView calheight;
@@ -155,8 +157,7 @@ public class caloryneeds extends AppCompatActivity {
                 (4.799 * Double.parseDouble(calheight.getText().toString())) +
                 (5.677 * Double.parseDouble(calage.getText().toString()));
         calorie = bmr * PAL[PALpos];
-
-        calView.setText("" + calorie);
+        calView.setText(new DecimalFormat("####.###").format(calorie));
         Log.d("Male", "male calories: " + calorie);
     }
 
